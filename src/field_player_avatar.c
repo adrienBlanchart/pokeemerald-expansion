@@ -1639,26 +1639,12 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     playerObjEventTemplate.trainerRange_berryTreeId = 0;
     playerObjEventTemplate.script = NULL;
     playerObjEventTemplate.flagId = 0;
-    struct ObjectEventTemplate template =
-    {
-        .localId = LOCALID_PLAYER,
-        .graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE),
-        .flagId = 0,
-        .x = x - MAP_OFFSET,
-        .y = y - MAP_OFFSET,
-        // If player active, copy player elevation
-        .elevation = 0,
-        .movementType = MOVEMENT_TYPE_PLAYER,
-        // store form info in template
-        //.trainerRange_berryTreeId = (form & 0x1F) | (shiny << 5),   // ???? what?
-    };
-    //objectEventId = SpawnSpecialObjectEvent(&playerObjEventTemplate);
-    objectEventId = SpawnSpecialObjectEvent(&template);
+
+    objectEventId = SpawnSpecialObjectEvent(&playerObjEventTemplate);
     
     objectEvent = &gObjectEvents[objectEventId];
     objectEvent->isPlayer = TRUE;
     objectEvent->warpArrowSpriteId = CreateWarpArrowSprite();
-    FollowerSetGraphics(objectEvent, SPECIES_BAGON, TRUE, FALSE);
     ObjectEventTurn(objectEvent, direction);
     ClearPlayerAvatarInfo();
     gPlayerAvatar.runningState = NOT_MOVING;
@@ -1668,6 +1654,9 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     gPlayerAvatar.gender = gender;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
     CreateFollowerNPCAvatar();
+    
+    FollowerSetGraphics(objectEvent, SPECIES_BAGON, TRUE, FALSE);
+
 }
 
 void SetPlayerInvisibility(bool8 invisible)
