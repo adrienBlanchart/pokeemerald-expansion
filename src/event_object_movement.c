@@ -11446,6 +11446,10 @@ static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female)
     return graphicsId;
 }
 
+u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female) {
+    return GetGraphicsIdForMon_Internal(species, shiny, female);
+}
+
 static u16 GetUnownSpecies(struct Pokemon *mon)
 {
     u32 form = GET_UNOWN_LETTER(mon->box.personality);
