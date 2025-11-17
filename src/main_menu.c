@@ -576,8 +576,9 @@ void CB2_ReinitMainMenu(void)
 
 static void SetPlayerBagon(void)
 {
+    u8 nature = Random() % NUM_NATURES;
     struct Pokemon mon; 
-    CreateMonWithNature(&mon, SPECIES_BAGON, 5, USE_RANDOM_IVS, PickWildMonNature());
+    CreateMonWithNature(&mon, SPECIES_BAGON, 5, USE_RANDOM_IVS, nature);
     GiveMonToPlayer(&mon);
 }
 

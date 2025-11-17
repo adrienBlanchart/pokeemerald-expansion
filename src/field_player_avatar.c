@@ -1500,7 +1500,8 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
-    return GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
+    u32 firstPkmnSpecies = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES);
+    return GetGraphicsIdForMon(firstPkmnSpecies, TRUE, FALSE);
     return sPlayerAvatarGfxIds[state][gender];
 }
 
@@ -1657,7 +1658,6 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
     CreateFollowerNPCAvatar();
 
-    u32 firstPkmnSpecies = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES);
     FollowerSetGraphics(objectEvent, firstPkmnSpecies, TRUE, FALSE);
 
 }
