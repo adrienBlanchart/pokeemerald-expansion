@@ -1499,6 +1499,7 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
+    return GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
     return sPlayerAvatarGfxIds[state][gender];
 }
 
@@ -1647,7 +1648,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
         .y = y - MAP_OFFSET,
         // If player active, copy player elevation
         .elevation = 0,
-        .movementType = MOVEMENT_TYPE_FOLLOW_PLAYER,
+        .movementType = MOVEMENT_TYPE_PLAYER,
         // store form info in template
         //.trainerRange_berryTreeId = (form & 0x1F) | (shiny << 5),   // ???? what?
     };
