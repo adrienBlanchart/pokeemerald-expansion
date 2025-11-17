@@ -574,13 +574,13 @@ void CB2_ReinitMainMenu(void)
     InitMainMenu(TRUE);
 }
 
-static void SetPlayerBagon()
+static void SetPlayerBagon(void)
 {
-    struct Pokemon* mon = NULL;
+    struct Pokemon mon; 
     CreateMonWithNature(&mon, SPECIES_BAGON, 5, USE_RANDOM_IVS, PickWildMonNature());
-    GiveMonToPlayer(mon);
-
+    GiveMonToPlayer(&mon);
 }
+
 
 static u32 InitMainMenu(bool8 returningFromOptionsMenu)
 {
