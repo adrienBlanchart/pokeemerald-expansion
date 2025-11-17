@@ -1235,7 +1235,8 @@ void PlayerWalkFaster(u8 direction)
 
 static void PlayerRun(u8 direction)
 {
-    PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
+    PlayerSetAnimId(PlayerWalkNormal(direction), COPY_MOVE_WALK);
+    //PlayerSetAnimId(GetPlayerRunMovementAction(direction), COPY_MOVE_WALK);
 }
 
 void PlayerOnBikeCollide(u8 direction)
@@ -1654,7 +1655,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     gPlayerAvatar.gender = gender;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
     CreateFollowerNPCAvatar();
-    
+
     FollowerSetGraphics(objectEvent, SPECIES_BAGON, TRUE, FALSE);
 
 }
