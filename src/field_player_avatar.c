@@ -1629,7 +1629,8 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
 
     playerObjEventTemplate.localId = LOCALID_PLAYER;
     //playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, gender);
-    playerObjEventTemplate.graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
+    u32 firstPkmnSpecies = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES);
+    playerObjEventTemplate.graphicsId = GetGraphicsIdForMon(firstPkmnSpecies, TRUE, FALSE);
     playerObjEventTemplate.x = x - MAP_OFFSET;
     playerObjEventTemplate.y = y - MAP_OFFSET;
     playerObjEventTemplate.elevation = 0;
@@ -1656,7 +1657,8 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
     CreateFollowerNPCAvatar();
 
-    FollowerSetGraphics(objectEvent, SPECIES_BAGON, TRUE, FALSE);
+    u32 firstPkmnSpecies = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES);
+    FollowerSetGraphics(objectEvent, firstPkmnSpecies, TRUE, FALSE);
 
 }
 

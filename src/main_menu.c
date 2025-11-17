@@ -574,6 +574,14 @@ void CB2_ReinitMainMenu(void)
     InitMainMenu(TRUE);
 }
 
+static void SetPlayerBagon()
+{
+    struct Pokemon* mon = NULL;
+    CreateMonWithNature(&mon, SPECIES_BAGON, 5, USE_RANDOM_IVS, PickWildMonNature());
+    GiveMonToPlayer(mon);
+
+}
+
 static u32 InitMainMenu(bool8 returningFromOptionsMenu)
 {
     SetVBlankCallback(NULL);
@@ -1313,6 +1321,7 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     PlayBGM(MUS_ROUTE122);
     ShowBg(0);
     ShowBg(1);
+    SetPlayerBagon(); // Gives a bagon to the player; player will be it's first pokemon
 }
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
