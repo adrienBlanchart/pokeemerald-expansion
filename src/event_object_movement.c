@@ -217,7 +217,7 @@ static bool8 NpcTakeStep(struct Sprite *);
 static bool8 AreElevationsCompatible(u8, u8);
 static void CopyObjectGraphicsInfoToSpriteTemplate_WithMovementType(u16 graphicsId, u16 movementType, struct SpriteTemplate *spriteTemplate, const struct SubspriteTable **subspriteTables);
 
-static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female);
+//static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female);
 static u16 GetUnownSpecies(struct Pokemon *mon);
 
 static const struct SpriteFrameImage sPicTable_PechaBerryTree[];
@@ -11436,7 +11436,7 @@ bool8 MovementAction_WalkSlowStairsRight_Step1(struct ObjectEvent *objectEvent, 
     return FALSE;
 }
 
-static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female)
+/* static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female)
 {
     u16 graphicsId = species + OBJ_EVENT_MON;
     if (shiny)
@@ -11444,10 +11444,15 @@ static u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female)
     if (female)
         graphicsId += OBJ_EVENT_MON_FEMALE;
     return graphicsId;
-}
+} */
 
 u16 GetGraphicsIdForMon(u32 species, bool32 shiny, bool32 female) {
-    return GetGraphicsIdForMon_Internal(species, shiny, female);
+    u16 graphicsId = species + OBJ_EVENT_MON;
+    if (shiny)
+        graphicsId += OBJ_EVENT_MON_SHINY;
+    if (female)
+        graphicsId += OBJ_EVENT_MON_FEMALE;
+    return graphicsId;
 }
 
 static u16 GetUnownSpecies(struct Pokemon *mon)
