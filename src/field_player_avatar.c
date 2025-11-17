@@ -1641,7 +1641,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     struct ObjectEventTemplate template =
     {
         .localId = LOCALID_PLAYER,
-        .graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
+        .graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE),
         .flagId = 0,
         .x = x - MAP_OFFSET,
         .y = y - MAP_OFFSET,
