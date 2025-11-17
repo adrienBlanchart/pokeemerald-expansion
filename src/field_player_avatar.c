@@ -1626,7 +1626,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     struct ObjectEvent *objectEvent;
 
     playerObjEventTemplate.localId = LOCALID_PLAYER;
-    playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, gender);
+    //playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_STATE_NORMAL, gender);
     playerObjEventTemplate.graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
     playerObjEventTemplate.x = x - MAP_OFFSET;
     playerObjEventTemplate.y = y - MAP_OFFSET;
@@ -1638,7 +1638,21 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     playerObjEventTemplate.trainerRange_berryTreeId = 0;
     playerObjEventTemplate.script = NULL;
     playerObjEventTemplate.flagId = 0;
-    objectEventId = SpawnSpecialObjectEvent(&playerObjEventTemplate);
+    struct ObjectEventTemplate template =
+    {
+        .localId = LOCALID_PLAYER,
+        .graphicsId = GetGraphicsIdForMon(SPECIES_BAGON, TRUE, FALSE);
+        .flagId = 0,
+        .x = x - MAP_OFFSET,
+        .y = y - MAP_OFFSET,
+        // If player active, copy player elevation
+        .elevation = 0,
+        .movementType = MOVEMENT_TYPE_FOLLOW_PLAYER,
+        // store form info in template
+        //.trainerRange_berryTreeId = (form & 0x1F) | (shiny << 5),   // ???? what?
+    };
+    //objectEventId = SpawnSpecialObjectEvent(&playerObjEventTemplate);
+    objectEventId = SpawnSpecialObjectEvent(&template);
     
     objectEvent = &gObjectEvents[objectEventId];
     objectEvent->isPlayer = TRUE;
