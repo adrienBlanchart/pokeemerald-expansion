@@ -4712,12 +4712,21 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = {
-    .tileTag = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tileTag,
-    .paletteTag = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.paletteTag, // ou remplace par ta palette
-    .size = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.size,
-    .shadowSize = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.shadowSize,
-    .tracks = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tracks,
-    .gender = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.gender,
-    .paletteSlot = 0, // force slot normal
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_EnemySalamenceMega,
+    .affineAnims = gDummySpriteAffineAnimTable,
 };
