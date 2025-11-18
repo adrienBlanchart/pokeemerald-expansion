@@ -13817,7 +13817,13 @@ static void Cmd_handleballthrow(void)
                 ballMultiplier = 10;
         }
         else
-        {
+        { 
+            if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
+                ballId = BALL_MASTER;
+                ITEM_SAFARI_BALL = ITEM_SMASTER_BALL;
+            }
+                
+
             switch (ballId)
             {
             case BALL_ULTRA:
@@ -13833,6 +13839,7 @@ static void Cmd_handleballthrow(void)
             case BALL_SAFARI:
                 if (B_SAFARI_BALL_MODIFIER <= GEN_7)
                     ballMultiplier = 150;
+               
                 break;
             case BALL_NET:
                 if (IS_BATTLER_ANY_TYPE(gBattlerTarget, TYPE_WATER, TYPE_BUG))
