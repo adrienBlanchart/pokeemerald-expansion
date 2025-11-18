@@ -495,7 +495,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_MASTER_BALL] =             &gObjectEventGraphicsInfo_MasterBall,
-    [OBJ_EVENT_GFX_SALAMENCE_MEGA_1] =        &gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData
+    [OBJ_EVENT_GFX_SALAMENCE_MEGA_1] =        &gSpeciesInfo[SPECIES_SALAMENCE].overworldData
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
