@@ -4712,7 +4712,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemyZigzagoon = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
