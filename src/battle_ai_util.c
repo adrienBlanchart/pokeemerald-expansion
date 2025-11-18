@@ -468,6 +468,8 @@ bool32 AI_BattlerAtMaxHp(u32 battlerId)
 
 bool32 AI_CanBattlerEscape(u32 battler)
 {
+    if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
+        return FALSE;
     enum ItemHoldEffect holdEffect = gAiLogicData->holdEffects[battler];
 
     if (B_GHOSTS_ESCAPE >= GEN_6 && IS_BATTLER_OF_TYPE(battler, TYPE_GHOST))
