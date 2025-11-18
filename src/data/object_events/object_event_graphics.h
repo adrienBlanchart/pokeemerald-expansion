@@ -394,7 +394,7 @@ const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/pa
 
 
 const u16 gObjectEventPal_SalamenceMega[] = INCBIN_U16("graphics/pokemon/salamence/mega/overworld_normal.gbapal");
-const u32 gObjectEventPic_SalamenceMega[] = INCBIN_COMP("graphics/pokemon/salamence/mega/overworld.4bpp")
+const u32 gObjectEventPic_SalamenceMega[] = INCBIN_COMP("graphics/pokemon/salamence/mega/overworld.4bpp");
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");
