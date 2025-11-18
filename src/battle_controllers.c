@@ -94,7 +94,7 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
         u32 shinyPersonality = tid ^ sid;
 
         ZeroEnemyPartyMons();
-        CreateMon(&gEnemyParty[0], SPECIES_SALAMENCE_MEGA, 100, USE_RANDOM_IVS, 0, shinyPersonality, OT_ID_PLAYER_ID, (tid | (sid << 16))));
+        CreateMon(&gEnemyParty[0], SPECIES_SALAMENCE_MEGA, 100, USE_RANDOM_IVS, 0, shinyPersonality, OT_ID_PLAYER_ID, (tid | (sid << 16)));
         i = 0;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
     }
