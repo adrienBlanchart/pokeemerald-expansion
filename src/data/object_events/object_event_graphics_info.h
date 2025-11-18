@@ -4727,6 +4727,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalamenceMega1 = {
     .oam = &gObjectEventBaseOam_64x64,
     .subspriteTables = sOamTables_64x64,
     .anims = sAnimTable_Following, // Animations overworld
-    .images = sPicTable_SalamenceMega1, // Table des images overworld
+    .images = sPicTable_SalamenceMega_1, // Table des images overworld
     .affineAnims = gDummySpriteAffineAnimTable
 };
