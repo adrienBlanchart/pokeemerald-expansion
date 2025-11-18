@@ -4572,6 +4572,15 @@ static void HandleTurnActionSelectionState(void)
                     gBattleCommunication[battler]++;
                     break;
                 case B_ACTION_SAFARI_RUN:
+                    if (IsRunningFromBattleImpossible(battler) != BATTLE_RUN_SUCCESS)
+                    {
+                        gSelectionBattleScripts[battler] = BattleScript_PrintCantEscapeFromBattle;
+                        gBattleCommunication[battler] = STATE_SELECTION_SCRIPT;
+                        gBattleStruct->selectionScriptFinished[battler] = FALSE;
+                        gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;
+                        return;
+                    }
+
                     gHitMarker |= HITMARKER_RUN;
                     gBattleCommunication[battler]++;
                     break;
