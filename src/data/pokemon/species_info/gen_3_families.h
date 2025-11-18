@@ -14,7 +14,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 6²5,
         .evYield_Speed = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
