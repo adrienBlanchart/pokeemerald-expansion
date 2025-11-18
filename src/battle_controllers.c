@@ -85,8 +85,16 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
 
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
     {
+        u16 tid = (gSaveBlock2Ptr->playerTrainerId[0]) 
+        | (gSaveBlock2Ptr->playerTrainerId[1] << 8);
+        u16 sid = (gSaveBlock2Ptr->playerTrainerId[2]) 
+        | (gSaveBlock2Ptr->playerTrainerId[3] << 8);
+
+        // Personality shiny garantie :
+        u32 shinyPersonality = tid ^ sid;
+
         ZeroEnemyPartyMons();
-        CreateMon(&gEnemyParty[0], SPECIES_ZIGZAGOON, 2, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+        CreateMon(&gEnemyParty[0], SPECIES_SALAMENCE_MEGA, 100, USE_RANDOM_IVS, 0, shinyPersonality, OT_ID_PLAYER_ID, (tid | (sid << 16))));
         i = 0;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
     }

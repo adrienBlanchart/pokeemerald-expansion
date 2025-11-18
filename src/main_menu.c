@@ -1322,7 +1322,6 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     PlayBGM(MUS_ROUTE122);
     ShowBg(0);
     ShowBg(1);
-    SetPlayerBagon(); // Gives a bagon to the player; player will be it's first pokemon
 }
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
