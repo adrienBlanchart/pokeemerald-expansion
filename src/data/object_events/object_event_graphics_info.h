@@ -4711,25 +4711,13 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 };
 
 
-/* 
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_GFX_SALAMENCE_MEGA_1,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 512,
-    .width = 32,
-    .height = 32,
-    .paletteSlot = PALSLOT_NPC_SPECIAL,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .compressed = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Standard,
-    .images = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData,
-    .affineAnims = gDummySpriteAffineAnimTable,
+    .tileTag = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.tileTag,
+    .paletteTag = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.paletteTag, // ou remplace par ta palette
+    .size = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.size,
+    .shadowSize = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.shadowSize,
+    .tracks = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.tracks,
+    .gender = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.gender,
+    .paletteSlot = 0, // force slot normal
 };
- */
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = gSpeciesInfo[SPECIES_SALAMENCE].overworldData;
-copy.paletteSlot = OBJ_EVENT_PAL_TAG_NPC_1;
