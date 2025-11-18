@@ -4713,11 +4713,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = {
-    .tileTag = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.tileTag,
-    .paletteTag = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.paletteTag, // ou remplace par ta palette
-    .size = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.size,
-    .shadowSize = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.shadowSize,
-    .tracks = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.tracks,
-    .gender = gSpeciesInfoGen3[SPECIES_SALAMENCE].overworldData.gender,
+    .tileTag = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tileTag,
+    .paletteTag = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.paletteTag, // ou remplace par ta palette
+    .size = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.size,
+    .shadowSize = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.shadowSize,
+    .tracks = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tracks,
+    .gender = gSpeciesInfo[SPECIES_SALAMENCE].overworldData.gender,
     .paletteSlot = 0, // force slot normal
 };
