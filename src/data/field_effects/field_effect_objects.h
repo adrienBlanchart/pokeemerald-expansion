@@ -40,6 +40,8 @@ const struct SpriteFrameImage gFieldEffectObjectPicTable_MartLight[] = {
     obj_frame_tiles(gFieldEffectObjectPic_MartLight),
 };
 
+
+
 const struct SpriteTemplate gFieldEffectObjectTemplate_BallLight = {
     .tileTag = OBJ_EVENT_PAL_TAG_LIGHT,
     .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT,

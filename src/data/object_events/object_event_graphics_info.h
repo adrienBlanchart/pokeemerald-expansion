@@ -4710,23 +4710,23 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-
+#define COMP OW_GFX_COMPRESS
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalamenceMega1 = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA, // Palette dynamique pour overworld
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.size,
-    .width = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.width,
-    .height = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.height,
+    .size = 2048,
+    .width = 64,
+    .height = 64,
     .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.shadowSize,
+    .shadowSize = SHADOW_SIZE_M, // Comme dans OVERWORLD macro
     .inanimate = FALSE,
-    .compressed = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.compressed,
-    .tracks = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tracks,
-    .oam = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.oam,
-    .subspriteTables = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.subspriteTables,
-    .anims = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.anims,
-    .images = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.images,
-    .affineAnims = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.affineAnims,
+    .compressed = COMP, // dépend de ta config OW_GFX_COMPRESS
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_64x64,
+    .subspriteTables = sOamTables_64x64,
+    .anims = sAnimTable_Following, // Animations overworld
+    .images = sPicTable_SalamenceMega1, // Table des images overworld
+    .affineAnims = gDummySpriteAffineAnimTable
 };
