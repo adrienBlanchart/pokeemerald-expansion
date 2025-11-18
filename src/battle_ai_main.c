@@ -6490,8 +6490,8 @@ static s32 AI_Safari(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 {
     u32 safariFleeRate = gBattleStruct->safariEscapeFactor * 5; // Safari flee rate, from 0-20.
 
-    if ((Random() % 100) < safariFleeRate && !(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE))
-        AI_Watch();//AI_Flee();
+    if ((Random() % 100) < safariFleeRate)
+        AI_Flee();
     else
         AI_Watch();
 
@@ -6501,6 +6501,8 @@ static s32 AI_Safari(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 // First battle logic
 static s32 AI_FirstBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 {
+    AI_Watch();
+    return score;
     if (gAiLogicData->hpPercents[battlerDef] <= 20)
         AI_Flee();
 
