@@ -3091,7 +3091,8 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
         gBattleStruct->safariEscapeFactor = 0;
-    else
+    }
+    else{
         gBattleStruct->safariEscapeFactor = 3;
     }
     gBattleStruct->wildVictorySong = 0;
