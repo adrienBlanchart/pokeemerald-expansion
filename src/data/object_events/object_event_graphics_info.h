@@ -4711,3 +4711,22 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 };
 
 
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalamenceMega1 = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.size,
+    .width = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.width,
+    .height = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.height,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.shadowSize,
+    .inanimate = FALSE,
+    .compressed = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.compressed,
+    .tracks = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.tracks,
+    .oam = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.oam,
+    .subspriteTables = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.subspriteTables,
+    .anims = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.anims,
+    .images = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.images,
+    .affineAnims = &gSpeciesInfo[SPECIES_SALAMENCE].overworldData.affineAnims,
+};
