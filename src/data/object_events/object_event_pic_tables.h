@@ -1119,6 +1119,15 @@ static const struct SpriteFrameImage sPicTable_PokeBall[] = {
 
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[];
 
+
+static const struct SpriteFrameImage sPicTable_Ball_MASTER[] = {
+     overworld_frame(gObjectEventPic_MasterBall, 2, 4, 0),
+    overworld_frame(gObjectEventPic_MasterBall, 2, 4, 1),
+    overworld_frame(gObjectEventPic_MasterBall, 2, 4, 2),
+    overworld_frame(gObjectEventPic_MasterBall, 2, 4, 3),
+    overworld_frame(gObjectEventPic_MasterBall, 2, 4, 4),
+    overworld_frame(gObjectEventPic_MasterBall, 2, 4, 0),
+};
 #if OW_FOLLOWERS_POKEBALLS
 #define POKEBALL_PIC_FRAMES(name)                              \
     overworld_frame(gObjectEventPic_##name##Ball, 2, 4, 0),    \
@@ -1128,9 +1137,6 @@ extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[];
     overworld_frame(gObjectEventPic_##name##Ball, 2, 4, 4),    \
     overworld_frame(gObjectEventPic_##name##Ball, 2, 4, 0)
 
-static const struct SpriteFrameImage sPicTable_Ball_MASTER[] = {
-    POKEBALL_PIC_FRAMES(Master),
-};
 static const struct SpriteFrameImage sPicTable_Ball_ULTRA[] = {
     POKEBALL_PIC_FRAMES(Ultra),
 };
@@ -1355,4 +1361,9 @@ static const struct SpriteFrameImage sPicTable_KirliaOld[] = {
 
 static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireMayNormal, 2, 4),
+};
+
+
+static const struct SpriteFrameImage sPicTable_EnemySalamenceMega[] = {
+    overworld_ascending_frames(gObjectEventPic_SalamenceMega, 4, 4),
 };
