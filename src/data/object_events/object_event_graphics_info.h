@@ -4655,7 +4655,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -4731,5 +4731,5 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega
     .affineAnims = gDummySpriteAffineAnimTable,
 };
  */
-struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = gSpeciesInfo[SPECIES_SALAMENCE].overworldData;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega = gSpeciesInfo[SPECIES_SALAMENCE].overworldData;
 copy.paletteSlot = OBJ_EVENT_PAL_TAG_NPC_1;
