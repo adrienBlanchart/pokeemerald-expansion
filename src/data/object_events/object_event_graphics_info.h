@@ -4727,6 +4727,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EnemySalamenceMega
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_EnemySalamenceMega,
+    .images = sPicTable_SalamenceMega,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
