@@ -1979,7 +1979,7 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
 
     txtPtr = StringCopy(text, gText_SafariBallLeft);
     if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
-        gNumSafariBalls = 1
+        gNumSafariBalls = 1;
     }
     ConvertIntToDecimalStringN(txtPtr, gNumSafariBalls, STR_CONV_MODE_LEFT_ALIGN, 2);
 
