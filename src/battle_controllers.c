@@ -86,7 +86,6 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
     {
         gBattleTypeFlags |= BATTLE_TYPE_SAFARI;
-        gNumSafariBalls = 1;
         ZeroEnemyPartyMons();
         CreateMon(&gEnemyParty[0], SPECIES_SALAMENCE_MEGA, 100, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
         i = 0;

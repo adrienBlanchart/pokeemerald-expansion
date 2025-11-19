@@ -13821,6 +13821,7 @@ static void Cmd_handleballthrow(void)
             if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
                 ballId = BALL_MASTER;
                 gLastUsedItem = ITEM_MASTER_BALL;
+                
             }
                 
 

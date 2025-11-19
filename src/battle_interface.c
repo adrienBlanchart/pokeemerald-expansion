@@ -1978,6 +1978,9 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
     u8 *windowTileData;
 
     txtPtr = StringCopy(text, gText_SafariBallLeft);
+    if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
+        gNumSafariBalls = 1
+    }
     ConvertIntToDecimalStringN(txtPtr, gNumSafariBalls, STR_CONV_MODE_LEFT_ALIGN, 2);
 
     windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, GetStringRightAlignXOffset(FONT_SMALL, text, 0x2F), 3, 2, &windowId);
