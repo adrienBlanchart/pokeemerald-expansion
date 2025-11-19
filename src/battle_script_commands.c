@@ -13820,7 +13820,7 @@ static void Cmd_handleballthrow(void)
         { 
             if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
                 ballId = BALL_MASTER;
-                ITEM_SAFARI_BALL = ITEM_MASTER_BALL;
+                gLastUsedItem = ITEM_MASTER_BALL;
             }
                 
 
