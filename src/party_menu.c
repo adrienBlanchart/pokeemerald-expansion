@@ -7624,9 +7624,9 @@ static void SetPartyIdAtBattleSlot(u8 slot, u8 setVal)
         gBattlePartyCurrentOrder[slot] = (gBattlePartyCurrentOrder[slot] & 0xF) | (setVal << 4);
 }
 
-void SwitchPartyMonSlots0_1(void)
+void SwapPartyMonSlots0_1(void)
 {
-    SwitchPartyMonSlots(0, 1);
+    SwapPartyPokemon(&gPlayerParty[0], &gPlayerParty[1])
 }
 
 void SwitchPartyMonSlots(u8 slot, u8 slot2)
