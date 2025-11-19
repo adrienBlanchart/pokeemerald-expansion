@@ -24,7 +24,7 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
-#define STARTER_MON_COUNT   3
+#define STARTER_MON_COUNT   7
 
 // Position of the sprite of the selected starter Pokémon
 #define STARTER_PKMN_POS_X (DISPLAY_WIDTH / 2)
@@ -112,9 +112,13 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    SPECIES_BAGON,
+    SPECIES_RALTS,
+    SPECIES_CHARMANDER,
+    SPECIES_BULBASAUR,
+    SPECIES_SQUIRTLE,
+    SPECIES_WEEDLE,
+    SPECIES_PIDGEY,
 };
 
 static const struct BgTemplate sBgTemplates[3] =

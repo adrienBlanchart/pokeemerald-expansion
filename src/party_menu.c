@@ -7624,6 +7624,11 @@ static void SetPartyIdAtBattleSlot(u8 slot, u8 setVal)
         gBattlePartyCurrentOrder[slot] = (gBattlePartyCurrentOrder[slot] & 0xF) | (setVal << 4);
 }
 
+void SwitchPartyMonSlots0_1(void)
+{
+    SwitchPartyMonSlots(0, 1);
+}
+
 void SwitchPartyMonSlots(u8 slot, u8 slot2)
 {
     u8 partyId = GetPartyIdFromBattleSlot(slot);
