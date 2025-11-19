@@ -230,6 +230,8 @@ Route101_EventScript_BirchsBag::
 	special SwapPartyMonSlots0_1
 	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
 	waitmovement 0
+	applymovement LOCALID_ROUTE101_BABYPKMN, Route101_Movement_BabyPkmnHide
+	waitmovement 0
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
@@ -256,6 +258,12 @@ Route101_EventScript_HideBrendanInBedroom::
 
 Route101_Movement_BirchApproachPlayer:
 	walk_right
+	step_end
+
+Route101_Movement_BabyPkmnHide:
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Route101_Text_HelpMe:

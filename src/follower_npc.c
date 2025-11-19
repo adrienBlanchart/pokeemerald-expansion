@@ -1168,6 +1168,7 @@ void NPCFollow(struct ObjectEvent *npc, u32 state, bool32 ignoreScriptActive)
 
 void CreateFollowerNPCAvatar(void)
 {
+    return;
     if (!PlayerHasFollowerNPC())
         return;
 
