@@ -414,6 +414,14 @@ static const struct SpriteFrameImage sPal_SalamenceMega1[] = {
     overworld_ascending_frames(gObjectEventPal_SalamenceMega_1, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Bagon_1[] = {
+    overworld_ascending_frames(gObjectEventPic_Bagon_1, 4, 4),
+};
+
+static const struct SpriteFrameImage sPal_Bagon_1[] = {
+    overworld_ascending_frames(gObjectEventPal_Bagon_1, 4, 4),
+};
+
 
 static const struct SpriteFrameImage sPicTable_Artist[] = {
     overworld_ascending_frames(gObjectEventPic_Artist, 2, 4),

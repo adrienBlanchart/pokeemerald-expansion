@@ -4712,21 +4712,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 #define COMP OW_GFX_COMPRESS
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalamenceMega1 = {
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA, // Palette dynamique pour overworld
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
-    .size = 512,
-    .width = 32,
-    .height = 32,
-    .paletteSlot = PALSLOT_NPC_1,
-    .shadowSize = SHADOW_SIZE_M, // Comme dans OVERWORLD macro
-    .inanimate = FALSE,
-    .compressed = COMP, // dépend de ta config OW_GFX_COMPRESS
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = sOamTables_32x32,
-    .anims = sAnimTable_Following, // Animations overworld
-    .images = sPicTable_SalamenceMega_1, // Table des images overworld
-    .affineAnims = gDummySpriteAffineAnimTable
-};
+#define DEFINE_OBJECT_EVENT_GFX_INFO(name, palTag, picTable, size) \
+const struct ObjectEventGraphicsInfo name = { \
+    .tileTag = TAG_NONE, \
+    .paletteTag = palTag, \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, \
+    .size = (size == SIZE_32x32 ? 512 : 2048), \
+    .width = (size == SIZE_32x32 ? 32 : 64), \
+    .height = (size == SIZE_32x32 ? 32 : 64), \
+    .paletteSlot = PALSLOT_NPC_1, \
+    .shadowSize = SHADOW_SIZE_M, \
+    .inanimate = FALSE, \
+    .compressed = COMP, \
+    .tracks = TRACKS_FOOT, \
+    .oam = (size == SIZE_32x32 ? &gObjectEventBaseOam_32x32 : &gObjectEventBaseOam_64x64), \
+    .subspriteTables = (size == SIZE_32x32 ? sOamTables_32x32 : sOamTables_64x64), \
+    .anims = sAnimTable_Following, \
+    .images = picTable, \
+    .affineAnims = gDummySpriteAffineAnimTable \
+}
+
+DEFINE_OBJECT_EVENT_GFX_INFO(gObjectEventGraphicsInfo_SalamenceMega1, OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA, sPicTable_SalamenceMega_1, SIZE_32x32);
+DEFINE_OBJECT_EVENT_GFX_INFO(gObjectEventGraphicsInfo_Bagon1, OBJ_EVENT_PAL_TAG_BAGON, sPicTable_Bagon_1, SIZE_32x32);
