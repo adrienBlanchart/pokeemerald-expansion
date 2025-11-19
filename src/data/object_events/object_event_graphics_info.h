@@ -4711,6 +4711,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 };
 
 #define COMP OW_GFX_COMPRESS
+#define SIZE_32x32 1
+#define SIZE_64x64 0
 
 #define DEFINE_OBJECT_EVENT_GFX_INFO(name, palTag, picTable, size) \
 const struct ObjectEventGraphicsInfo name = { \
