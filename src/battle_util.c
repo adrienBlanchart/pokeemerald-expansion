@@ -764,6 +764,9 @@ void HandleAction_SafariZoneBallThrow(void)
     gBattle_BG0_Y = 0;
     gNumSafariBalls--;
     gLastUsedItem = ITEM_SAFARI_BALL;
+    if(gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE){
+        gLastUsedItem = ITEM_MASTER_BALL;
+    }
     gBattlescriptCurrInstr = BattleScript_SafariBallThrow;
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
