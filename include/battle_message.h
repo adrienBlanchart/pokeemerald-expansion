@@ -286,6 +286,7 @@ extern const u8 gText_BattleSwitchWhich3[];
 extern const u8 gText_BattleSwitchWhich4[];
 extern const u8 gText_BattleSwitchWhich5[];
 extern const u8 gText_SafariBalls[];
+extern const u8 gText_MasterBalls[];
 extern const u8 gText_SafariBallLeft[];
 extern const u8 gText_Sleep[];
 extern const u8 gText_Poison[];
