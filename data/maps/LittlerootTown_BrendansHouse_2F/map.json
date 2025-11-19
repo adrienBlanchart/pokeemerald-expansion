@@ -241,7 +241,7 @@
       "y": 2,
       "elevation": 0,
       "var": "VAR_CUSTOM_LITTLEROOT_PROGRESSION",
-      "var_value": "0",
+      "var_value": "1",
       "script": "PlayersHouse_2F_EventScript_ShouldGoToBed"
     },
     {
@@ -250,7 +250,7 @@
       "y": 4,
       "elevation": 0,
       "var": "VAR_CUSTOM_LITTLEROOT_PROGRESSION",
-      "var_value": "0",
+      "var_value": "1",
       "script": "PlayersHouse_2F_EventScript_RestAndBecomePkmn"
     }
   ],

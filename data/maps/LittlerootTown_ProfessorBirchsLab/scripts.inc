@@ -128,7 +128,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
-	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 0
+	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 1
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_RestInBrendanBedroom
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_RestInMayBedroom

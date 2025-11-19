@@ -278,7 +278,7 @@ PlayersHouse_2F_EventScript_ShouldGoToBed::
 	end
 
 PlayersHouse_2F_EventScript_RestAndBecomePkmn::
-	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 1
+	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 2
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
