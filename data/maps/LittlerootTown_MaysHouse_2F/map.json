@@ -243,6 +243,15 @@
       "var": "VAR_CUSTOM_LITTLEROOT_PROGRESSION",
       "var_value": "0",
       "script": "PlayersHouse_2F_EventScript_ShouldGoToBed"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_CUSTOM_LITTLEROOT_PROGRESSION",
+      "var_value": "0",
+      "script": "PlayersHouse_2F_EventScript_RestAndBecomePkmn"
     }
   ],
   "bg_events": [

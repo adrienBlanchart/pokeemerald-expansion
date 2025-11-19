@@ -277,7 +277,7 @@ PlayersHouse_2F_EventScript_ShouldGoToBed::
 	waitmovement 0
 	end
 
-PlayersHouse_2F_EventScript_ShouldGoToBed::
+PlayersHouse_2F_EventScript_RestAndBecomePkmn::
 	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 1
 	end
 
