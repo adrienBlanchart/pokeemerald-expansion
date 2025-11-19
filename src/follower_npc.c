@@ -165,6 +165,8 @@ u32 GetFollowerNPCData(enum FollowerNPCDataTypes type)
     case FNPC_DATA_FOLLOWER_FLAGS:
         return gSaveBlock3Ptr->NPCfollower.flags;
     case FNPC_DATA_BATTLE_PARTNER:
+        // disable follower battle partners for now
+        return 0;
         return gSaveBlock3Ptr->NPCfollower.battlePartner;
     }
 #endif
@@ -1168,7 +1170,6 @@ void NPCFollow(struct ObjectEvent *npc, u32 state, bool32 ignoreScriptActive)
 
 void CreateFollowerNPCAvatar(void)
 {
-    return;
     if (!PlayerHasFollowerNPC())
         return;
 
