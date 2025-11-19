@@ -273,7 +273,7 @@ PlayersHouse_2F_EventScript_GameCube::
 PlayersHouse_2F_EventScript_ShouldGoToBed::
 	msgbox PlayersHouse_2F_Text_ShouldGoToBed, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_PLAYER, PlayersHouse_2F_Movement_PushPlayerBackShouldGoToBed
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PushPlayerBackFromRoute
 	waitmovement 0
 	end
 
@@ -317,9 +317,3 @@ PlayersHouse_2F_Text_ShouldGoToBed:
     .string "I need to rest for a while.$"
 
 	
-
-PlayersHouse_2F_Movement_PushPlayerBackShouldGoToBed:
-	lock_facing_direction
-	walk_down
-	unlock_facing_direction
-	step_end
