@@ -111,9 +111,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
@@ -123,15 +121,25 @@ LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_RestInBrendanBedroom
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_RestInMayBedroom
+	end
+
+LittlerootTown_EventScript_RestInBrendanBedroom::
+	warp MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 1, 1
+	releaseall
+	end
+
+LittlerootTown_EventScript_RestInMayBedroom::
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 1, 1
 	releaseall
 	end
 
@@ -691,7 +699,7 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
 	.string "you pulled it off with aplomb!\p"
 	.string "I guess you have your father's blood\n"
 	.string "in your veins after all!\p"
-	.string "Oh, yes. it was my only Master Ball,\n"
+	.string "Oh, yes. It was my only Master Ball,\n"
 	.string "but oh well. As thanks for rescuing me,\n"
 	.string "I'd like you to keep the POKéMON you\l"
 	.string "catched earlier.\p"
@@ -707,8 +715,10 @@ LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival:
 	.string "an extremely good TRAINER.\p"
 	.string "My kid, {RIVAL}, is also studying\n"
 	.string "POKéMON while helping me out.\p"
-	.string "{PLAYER}{KUN}, don't you think it might be\n"
-	.string "a good idea to go see {RIVAL}?$"
+	.string "{PLAYER}{KUN}, go see {RIVAL}.\n"
+	.string "But first, go to bed.\p"
+	.string "Go get some rest, you've really earned it.$"
+
 
 LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou:
 	.string "PROF. BIRCH: Great!\n"
