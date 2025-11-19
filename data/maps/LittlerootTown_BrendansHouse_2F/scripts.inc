@@ -270,6 +270,17 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
 
+PlayersHouse_2F_EventScript_ShouldGoToBed::
+	msgbox PlayersHouse_2F_Text_ShouldGoToBed, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, PlayersHouse_2F_Movement_PushPlayerBackShouldGoToBed
+	waitmovement 0
+	end
+
+PlayersHouse_2F_EventScript_ShouldGoToBed::
+	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 1
+	end
+
 PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
@@ -300,3 +311,15 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+PlayersHouse_2F_Text_ShouldGoToBed:
+    .string "I should go to bed.\n"
+    .string "I need to rest for a while.$"
+
+	
+
+PlayersHouse_2F_Movement_PushPlayerBackShouldGoToBed:
+	lock_facing_direction
+	walk_down
+	unlock_facing_direction
+	step_end
