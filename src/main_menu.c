@@ -1291,6 +1291,13 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
+
+static void InitVars(void){
+     // Initialize custom progression variables here
+    VarSet(VAR_CUSTOM_LITTLEROOT_PROGRESSION, 0);
+}
+
+
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
    
@@ -1326,11 +1333,6 @@ static void Task_NewGameBirchSpeech_Init(u8 taskId)
     ShowBg(1);
     InitVars();
     //SetPlayerBagon(); // Gives a bagon to the player; player will be it's first pokemon
-}
-
-static void InitVars(){
-     // Initialize custom progression variables here
-    VarSet(VAR_CUSTOM_LITTLEROOT_PROGRESSION, 0);
 }
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
