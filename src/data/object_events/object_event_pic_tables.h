@@ -1135,6 +1135,7 @@ static const struct SpriteFrameImage sPicTable_PokeBall[] = {
 };
 
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[];
+extern const struct SpriteFrameImage gFieldEffectObjectPicTable_Fang[];
 
 
 static const struct SpriteFrameImage sPicTable_Ball_MASTER[] = {

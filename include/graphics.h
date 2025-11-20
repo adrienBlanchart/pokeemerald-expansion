@@ -2192,7 +2192,6 @@ extern const u32 gBattleAnimSpriteGfx_Coin[];
 extern const u32 gBattleAnimSpriteGfx_CrackedEgg[];
 extern const u32 gBattleAnimSpriteGfx_HatchedEgg[];
 extern const u32 gBattleAnimSpriteGfx_FreshEgg[];
-extern const u32 gBattleAnimSpritePic_Fangs[];
 extern const u32 gBattleAnimSpriteGfx_Fangs[];
 extern const u32 gBattleAnimSpriteGfx_Explosion2[];
 extern const u32 gBattleAnimSpriteGfx_Explosion3[];

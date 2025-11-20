@@ -30,7 +30,7 @@ static const struct SpriteFrameImage sPicTable_ShadowExtraLarge[] = {
 const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[] = {
     obj_frame_tiles(gFieldEffectObjectPic_BallLight),
 };
-const struct SpriteFrameImage gFieldEffectObjectPicTable_Fang1[] = {
+const struct SpriteFrameImage gFieldEffectObjectPicTable_Fang[] = {
     obj_frame_tiles(gBattleAnimSpritePic_Fangs),
 };
 
