@@ -279,6 +279,7 @@ PlayersHouse_2F_EventScript_ShouldGoToBed::
 
 PlayersHouse_2F_EventScript_RestAndBecomePkmn::
 	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 2
+	warp MAP_CLEARING_PKMN_NEST, 2, 5
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
