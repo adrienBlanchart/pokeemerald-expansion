@@ -4765,6 +4765,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs1 = {
     .oam = &gObjectEventBaseOam_8x8,
     .subspriteTables = sOamTables_32x64,
     .anims = sAnimTable_Inanimate, // Animations overworld
-    .images = gFieldEffectObjectPicTable_Fang1, // Table des images overworldd
+    .images = gFieldEffectObjectPicTable_Fang, // Table des images overworldd
     .affineAnims = gDummySpriteAffineAnimTable
 };
