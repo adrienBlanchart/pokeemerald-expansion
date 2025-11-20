@@ -660,7 +660,6 @@ const u32 gBattleAnimSpriteGfx_CrackedEgg[] = INCBIN_U32("graphics/battle_anims/
 const u32 gBattleAnimSpriteGfx_HatchedEgg[] = INCBIN_U32("graphics/battle_anims/sprites/hatched_egg.4bpp.smol");
 const u32 gBattleAnimSpriteGfx_FreshEgg[] = INCBIN_U32("graphics/battle_anims/sprites/fresh_egg.4bpp.smol");
 
-const u32 gBattleAnimSpritePic_Fangs[] = INCBIN_U32("graphics/battle_anims/sprites/fangs.4bpp");
 const u32 gBattleAnimSpriteGfx_Fangs[] = INCBIN_U32("graphics/battle_anims/sprites/fangs.4bpp.smol");
 const u16 gBattleAnimSpritePal_Fangs[] = INCBIN_U16("graphics/battle_anims/sprites/fangs.gbapal");
 
