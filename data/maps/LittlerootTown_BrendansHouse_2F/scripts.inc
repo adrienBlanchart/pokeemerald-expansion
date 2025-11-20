@@ -279,7 +279,10 @@ PlayersHouse_2F_EventScript_ShouldGoToBed::
 
 PlayersHouse_2F_EventScript_RestAndBecomePkmn::
 	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 2
+	special Remove1stPkmn
 	warp MAP_CLEARING_PKMN_NEST, 2, 5
+	msgbox PlayersHouse_2F_Text_Mom, MSGBOX_DEFAULT
+	closemessage
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
@@ -316,5 +319,8 @@ PlayersHouse_2F_Text_ItsAGameCube:
 PlayersHouse_2F_Text_ShouldGoToBed:
     .string "I should go to bed.\n"
     .string "I need to rest for a while.$"
+
+PlayersHouse_2F_Text_Mom:
+    .string "“…Mom…?”$"
 
 	

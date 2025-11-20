@@ -509,6 +509,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_EnemyZigzagoon,        OBJ_EVENT_PAL_TAG_ZIGZAGOON},
     {gObjectEventPal_SalamenceMega_1,       OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA},
     {gObjectEventPal_Bagon_1,               OBJ_EVENT_PAL_TAG_BAGON},
+    {gBattleAnimSpritePal_Fangs,               OBJ_EVENT_PAL_TAG_FANG},
     {gObjectEventPal_May,                   OBJ_EVENT_PAL_TAG_MAY},
     {gObjectEventPal_MayReflection,         OBJ_EVENT_PAL_TAG_MAY_REFLECTION},
     {gObjectEventPal_MovingBox,             OBJ_EVENT_PAL_TAG_MOVING_BOX},

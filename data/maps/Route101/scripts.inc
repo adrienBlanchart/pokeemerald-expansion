@@ -264,6 +264,7 @@ Route101_Movement_BabyPkmnHide:
 	walk_left
 	walk_left
 	walk_left
+	walk_left
 	step_end
 
 Route101_Text_HelpMe:

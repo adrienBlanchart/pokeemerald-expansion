@@ -236,6 +236,7 @@ gSpecials::
 	def_special DoPCTurnOnEffect
 	def_special DoPCTurnOffEffect
 	def_special SetDeptStoreFloor
+	def_special Remove1stPkmn
 	def_special DoLotteryCornerComputerEffect
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner

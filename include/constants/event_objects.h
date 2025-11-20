@@ -249,11 +249,12 @@
 #define OBJ_EVENT_GFX_MASTER_BALL                 242
 #define OBJ_EVENT_GFX_SALAMENCE_MEGA_1                243
 #define OBJ_EVENT_GFX_BAGON_1                244
+#define OBJ_EVENT_GFX_FANG_1                245
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        245
+#define NUM_OBJ_EVENT_GFX                        246
 
 
 // These are dynamic object gfx ids.
@@ -428,6 +429,7 @@
 
 #define OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA              0x8005
 #define OBJ_EVENT_PAL_TAG_BAGON              0x8006
+#define OBJ_EVENT_PAL_TAG_FANG              0x8007
 
 
 // Not a real OW palette tag; used for the white flash applied to followers

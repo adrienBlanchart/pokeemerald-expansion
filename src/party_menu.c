@@ -7629,6 +7629,20 @@ void SwapPartyMonSlots0_1(void)
     SwapPartyPokemon(&gPlayerParty[0], &gPlayerParty[1]);
 }
 
+
+void Remove1stPkmn(void)
+{
+    // Décale l'équipe vers la gauche
+    for (int i = 0; i < PARTY_SIZE - 1; i++)
+    {
+        gPlayerParty[i] = gPlayerParty[i + 1];
+    }
+
+    // Vide le dernier Pokémon (slot devenu inutile)
+    ZeroMonData(&gPlayerParty[PARTY_SIZE - 1]);
+}
+
+
 void SwitchPartyMonSlots(u8 slot, u8 slot2)
 {
     u8 partyId = GetPartyIdFromBattleSlot(slot);

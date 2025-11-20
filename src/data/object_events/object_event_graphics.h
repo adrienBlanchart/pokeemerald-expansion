@@ -399,6 +399,7 @@ const u32 gObjectEventPic_SalamenceMega_1[] = INCBIN_COMP("graphics/pokemon/sala
 const u16 gObjectEventPal_Bagon_1[] = INCBIN_U16("graphics/pokemon/bagon/overworld_normal.gbapal");
 const u32 gObjectEventPic_Bagon_1[] = INCBIN_COMP("graphics/pokemon/bagon/overworld.4bpp");
 
+
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");
 const u32 gObjectEventPic_UltraBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_ultra.4bpp");

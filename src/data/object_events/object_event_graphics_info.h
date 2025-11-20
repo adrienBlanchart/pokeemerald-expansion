@@ -4749,3 +4749,22 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bagon1 = {
     .images = sPicTable_Bagon_1, // Table des images overworld
     .affineAnims = gDummySpriteAffineAnimTable
 };
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs1 = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_FANG, // Palette dynamique pour overworld
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 2048,
+    .width = 32,
+    .height = 64,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_NONE, 
+    .inanimate = FALSE,
+    .compressed = FALSE, // dépend de ta config OW_GFX_COMPRESS
+    .tracks = TRACKS_NONE,
+    .oam = &gObjectEventBaseOam_64x32,
+    .subspriteTables = sOamTables_64x32,
+    .anims = sAnimTable_Inanimate, // Animations overworld
+    .images = sPicTable_Bagon_1, // Table des images overworld
+    .affineAnims = gDummySpriteAffineAnimTable
+};

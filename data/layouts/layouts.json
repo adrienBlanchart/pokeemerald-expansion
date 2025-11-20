@@ -4414,7 +4414,7 @@
     {
       "id": "LAYOUT_CLEARING_PKMN_NEST",
       "name": "Clearing_Pkmn_Nest_Layout",
-      "width": 8,
+      "width": 12,
       "height": 8,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
