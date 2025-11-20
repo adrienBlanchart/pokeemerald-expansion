@@ -1416,6 +1416,15 @@ static const struct SubspriteTable sOamTables_88x32[] = {
     {ARRAY_COUNT(sOamTable_88x32_3), sOamTable_88x32_3}
 };
 
+static const struct SubspriteTable sOamTables_32x64[] = {
+    {ARRAY_COUNT(sOamTables_32x64_0), sOamTables_32x64_0},
+    {ARRAY_COUNT(sOamTables_32x64_0), sOamTables_32x64_0},
+    {ARRAY_COUNT(sOamTables_32x64_1), sOamTables_32x64_1},
+    {ARRAY_COUNT(sOamTables_32x64_2), sOamTables_32x64_2},
+    {ARRAY_COUNT(sOamTables_32x64_3), sOamTables_32x64_3},
+    {ARRAY_COUNT(sOamTables_32x64_3), sOamTables_32x64_3}
+};
+
 #if OW_LARGE_OW_SUPPORT
 // These tables allow (virtual) sprite sizes so that
 // some space can be saved by making graphics smaller.

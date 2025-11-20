@@ -4762,9 +4762,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs1 = {
     .inanimate = FALSE,
     .compressed = FALSE, // dépend de ta config OW_GFX_COMPRESS
     .tracks = TRACKS_NONE,
-    .oam = &gObjectEventBaseOam_64x32,
-    .subspriteTables = sOamTables_64x32,
+    .oam = &gObjectEventBaseOam_8x8,
+    .subspriteTables = sOamTables_32x64,
     .anims = sAnimTable_Inanimate, // Animations overworld
-    .images = sPicTable_Bagon_1, // Table des images overworld
+    .images = gFieldEffectObjectPicTable_Fang1, // Table des images overworldd
     .affineAnims = gDummySpriteAffineAnimTable
 };

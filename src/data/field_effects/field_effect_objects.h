@@ -31,7 +31,7 @@ const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[] = {
     obj_frame_tiles(gFieldEffectObjectPic_BallLight),
 };
 const struct SpriteFrameImage gFieldEffectObjectPicTable_Fang1[] = {
-    obj_frame_tiles(gBattleAnimSpritePic_Fangs),
+    obj_frame_tiles(gBattleAnimSpriteGfx_Fangs),
 };
 
 const struct SpriteFrameImage gFieldEffectObjectPicTable_PokeCenterLight[] = {
