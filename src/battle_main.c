@@ -3476,7 +3476,7 @@ static void DoBattleIntro(void)
             gBattleStruct->introState++;
         break;
     case BATTLE_INTRO_STATE_DRAW_SPRITES:
-        #ifndef CUSTOM_GAME_MENU
+        
         for (battler = 0; battler < gBattlersCount; battler++)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_SAFARI) && IsOnPlayerSide(battler))
@@ -3509,10 +3509,13 @@ static void DoBattleIntro(void)
             switch (GetBattlerPosition(battler))
             {
             case B_POSITION_PLAYER_LEFT: // player sprite
+                #ifndef CUSTOM_GAME_MENU
                 BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
                 MarkBattlerForControllerExec(battler);
+                #endif
                 break;
             case B_POSITION_OPPONENT_LEFT:
+            
                 if (gBattleTypeFlags & BATTLE_TYPE_TRAINER) // opponent 1 sprite
                 {
                     BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
@@ -3553,7 +3556,7 @@ static void DoBattleIntro(void)
             if (gBattleTypeFlags & BATTLE_TYPE_ARENA)
                 BattleArena_InitPoints();
         }
-        #endif // CUSTOM_GAME_MENU
+        
         if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
             gBattleStruct->introState++;
         else // Skip party summary since it is a wild battle.
