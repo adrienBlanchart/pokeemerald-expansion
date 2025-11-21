@@ -106,9 +106,7 @@ void SetFollowerNPCData(enum FollowerNPCDataTypes type, u32 value)
         gSaveBlock3Ptr->NPCfollower.flags = value;
         break;
     case FNPC_DATA_BATTLE_PARTNER:
-        #if FNPC_ENABLE_BATTLER_FOLLOWERS
-            gSaveBlock3Ptr->NPCfollower.battlePartner = value;
-        #endif
+        gSaveBlock3Ptr->NPCfollower.battlePartner = value;
         break;
     }
 #endif
@@ -168,9 +166,8 @@ u32 GetFollowerNPCData(enum FollowerNPCDataTypes type)
         return gSaveBlock3Ptr->NPCfollower.flags;
     case FNPC_DATA_BATTLE_PARTNER:
         // disable follower battle partners for now
-         #if FNPC_ENABLE_BATTLER_FOLLOWERS
-            return gSaveBlock3Ptr->NPCfollower.battlePartner;
-        #endif        
+        return gSaveBlock3Ptr->NPCfollower.battlePartner;
+              
     }
 #endif
     return 0;
@@ -1175,7 +1172,7 @@ void CreateFollowerNPCAvatar(void)
 {
     if (!PlayerHasFollowerNPC())
         return;
-
+    return;
     struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
     struct ObjectEventTemplate clone = 
     {
