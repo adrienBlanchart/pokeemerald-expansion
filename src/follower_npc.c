@@ -1531,7 +1531,7 @@ void FollowerNPCFaceAfterLeaveMap(void)
 
 bool32 FollowerNPCIsBattlePartner(void)
 {
-    if (PlayerHasFollowerNPC() && GetFollowerNPCData(FNPC_DATA_BATTLE_PARTNER))
+    if (FNPC_ENABLE_NPC_FOLLOWERS && PlayerHasFollowerNPC() && GetFollowerNPCData(FNPC_DATA_BATTLE_PARTNER))
         return TRUE;
 
     return FALSE;
@@ -1544,7 +1544,7 @@ u32 GetFollowerNPCBattlePartner(void)
 
 bool32 IsNPCFollowerWildBattle(void)
 {
-    if (FollowerNPCIsBattlePartner() && FNPC_FLAG_PARTNER_WILD_BATTLES != 0
+    if (FNPC_ENABLE_NPC_FOLLOWERS && FollowerNPCIsBattlePartner() && FNPC_FLAG_PARTNER_WILD_BATTLES != 0
      && (FNPC_FLAG_PARTNER_WILD_BATTLES == FNPC_ALWAYS || FlagGet(FNPC_FLAG_PARTNER_WILD_BATTLES)))
         return TRUE;
 
@@ -1554,7 +1554,7 @@ bool32 IsNPCFollowerWildBattle(void)
 void PrepareForFollowerNPCBattle(void)
 {
     // Load the partner party if the NPC follower should participate.
-    if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && FollowerNPCIsBattlePartner())
+    if (FNPC_ENABLE_NPC_FOLLOWERS && gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && FollowerNPCIsBattlePartner())
     {
         SavePlayerParty();
         ChooseFirstThreeEligibleMons();
