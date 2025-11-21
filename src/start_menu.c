@@ -341,11 +341,9 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKEMON);
     
     AddStartMenuAction(MENU_ACTION_BAG);
-    #endif
 
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKENAV);
-    #ifndef CUSTOM_GAME_MENU
     AddStartMenuAction(MENU_ACTION_PLAYER);
     #endif
     AddStartMenuAction(MENU_ACTION_SAVE);
