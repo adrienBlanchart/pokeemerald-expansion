@@ -3509,10 +3509,11 @@ static void DoBattleIntro(void)
             switch (GetBattlerPosition(battler))
             {
             case B_POSITION_PLAYER_LEFT: // player sprite
-                #ifndef CUSTOM_GAME_MENU
-                BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
-                MarkBattlerForControllerExec(battler);
-                #endif
+                if (VarGet(VAR_CUSTOM_LITTLEROOT_PROGRESSION) < 2)
+                {
+                    BtlController_EmitDrawTrainerPic(battler, B_COMM_TO_CONTROLLER);
+                    MarkBattlerForControllerExec(battler);
+                }
                 break;
             case B_POSITION_OPPONENT_LEFT:
             
