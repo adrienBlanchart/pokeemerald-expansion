@@ -698,7 +698,6 @@ static void CalculateFollowerNPCEscalatorTrajectoryDown(struct Task *task)
 
 void CreateFollowerNPC(u32 gfx, u32 followerFlags, const u8 *scriptPtr)
 {
-    return;
     if (PlayerHasFollowerNPC())
         return;
         
