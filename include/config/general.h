@@ -87,4 +87,4 @@
 #endif // GUARD_CONFIG_GENERAL_H
 
 
-#define CUSTOM_GAME_MENU = TRUE // change the menu for my custom rom :)
+#define CUSTOM_GAME_MENU  TRUE // change the menu for my custom rom :)

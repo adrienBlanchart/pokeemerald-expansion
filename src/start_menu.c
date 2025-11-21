@@ -330,22 +330,24 @@ static void AddStartMenuAction(u8 action)
 
 static void BuildNormalStartMenu(void)
 {
-    if (!CUSTOM_GAME_MENU && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
+    #ifndef CUSTOM_GAME_MENU
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
 
-    if (!CUSTOM_GAME_MENU && DN_FLAG_DEXNAV_GET != 0 && FlagGet(DN_FLAG_DEXNAV_GET))
+    if (DN_FLAG_DEXNAV_GET != 0 && FlagGet(DN_FLAG_DEXNAV_GET))
         AddStartMenuAction(MENU_ACTION_DEXNAV);
 
-    if (!CUSTOM_GAME_MENU && FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEMON);
-    if(!CUSTOM_GAME_MENU)
-        AddStartMenuAction(MENU_ACTION_BAG);
+    
+    AddStartMenuAction(MENU_ACTION_BAG);
+    #endif
 
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKENAV);
-
-    if(!CUSTOM_GAME_MENU)
-        AddStartMenuAction(MENU_ACTION_PLAYER);
+    #ifndef CUSTOM_GAME_MENU
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+    #endif
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
