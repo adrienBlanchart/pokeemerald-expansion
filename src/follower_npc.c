@@ -105,11 +105,11 @@ void SetFollowerNPCData(enum FollowerNPCDataTypes type, u32 value)
     case FNPC_DATA_FOLLOWER_FLAGS:
         gSaveBlock3Ptr->NPCfollower.flags = value;
         break;
-    #if FNPC_ENABLE_BATTLER_FOLLOWERS
     case FNPC_DATA_BATTLE_PARTNER:
-        gSaveBlock3Ptr->NPCfollower.battlePartner = value;
+        #if FNPC_ENABLE_BATTLER_FOLLOWERS
+            gSaveBlock3Ptr->NPCfollower.battlePartner = value;
+        #endif
         break;
-    #endif
     }
 #endif
 }
@@ -166,12 +166,11 @@ u32 GetFollowerNPCData(enum FollowerNPCDataTypes type)
         return gSaveBlock3Ptr->NPCfollower.graphicsId;
     case FNPC_DATA_FOLLOWER_FLAGS:
         return gSaveBlock3Ptr->NPCfollower.flags;
-    #if FNPC_ENABLE_BATTLER_FOLLOWERS
     case FNPC_DATA_BATTLE_PARTNER:
         // disable follower battle partners for now
-        return gSaveBlock3Ptr->NPCfollower.battlePartner;
-    #endif
-
+         #if FNPC_ENABLE_BATTLER_FOLLOWERS
+            return gSaveBlock3Ptr->NPCfollower.battlePartner;
+        #endif        
     }
 #endif
     return 0;
