@@ -698,6 +698,7 @@ static void CalculateFollowerNPCEscalatorTrajectoryDown(struct Task *task)
 
 void CreateFollowerNPC(u32 gfx, u32 followerFlags, const u8 *scriptPtr)
 {
+    return;
     if (PlayerHasFollowerNPC())
         return;
         
@@ -1172,7 +1173,7 @@ void CreateFollowerNPCAvatar(void)
 {
     if (!PlayerHasFollowerNPC())
         return;
-    return;
+    
     struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
     struct ObjectEventTemplate clone = 
     {
