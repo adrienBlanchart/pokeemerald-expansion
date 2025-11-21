@@ -3476,6 +3476,7 @@ static void DoBattleIntro(void)
             gBattleStruct->introState++;
         break;
     case BATTLE_INTRO_STATE_DRAW_SPRITES:
+        #ifndef CUSTOM_GAME_MENU
         for (battler = 0; battler < gBattlersCount; battler++)
         {
             if ((gBattleTypeFlags & BATTLE_TYPE_SAFARI) && IsOnPlayerSide(battler))
@@ -3552,7 +3553,7 @@ static void DoBattleIntro(void)
             if (gBattleTypeFlags & BATTLE_TYPE_ARENA)
                 BattleArena_InitPoints();
         }
-
+        #endif // CUSTOM_GAME_MENU
         if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
             gBattleStruct->introState++;
         else // Skip party summary since it is a wild battle.
