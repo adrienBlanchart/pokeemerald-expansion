@@ -297,7 +297,7 @@ const u32 gFieldEffectObjectPic_ShadowLarge[] = INCBIN_U32("graphics/field_effec
 const u32 gFieldEffectObjectPic_ShadowExtraLarge[] = INCBIN_U32("graphics/field_effects/pics/shadow_extra_large.4bpp");
 const u32 gFieldEffectObjectPic_BallLight[] = INCBIN_U32("graphics/object_events/pics/misc/light.4bpp");
 const u32 gBattleAnimSpritePic_Fangs_1[] = INCBIN_U32("graphics/object_events/pics/misc/scratch.4bpp");
-const u16 gBattleAnimSpritePal_Fangs_1[] = INCBIN_U16("graphics/object_events/palettes/misc/scratch.gbapal");
+const u16 gBattleAnimSpritePal_Fangs_1[] = INCBIN_U16("graphics/object_events/palettes/scratch.gbapal");
 
 const u32 gFieldEffectObjectPic_PokeCenterLight[] = INCBIN_U32("graphics/object_events/pics/misc/poke_center_light.4bpp");
 const u32 gFieldEffectObjectPic_MartLight[] = INCBIN_U32("graphics/object_events/pics/misc/mart_light.4bpp");
