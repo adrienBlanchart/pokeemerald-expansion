@@ -85,3 +85,6 @@
 
 #define SAVE_TYPE_ERROR_SCREEN              FALSE   // When enabled, this shows an error message when the game is loaded on a cart without a flash chip or on an emulator with the wrong save type setting instead of crashing.
 #endif // GUARD_CONFIG_GENERAL_H
+
+
+#define CUSTOM_GAME_MENU = TRUE // change the menu for my custom rom :)
