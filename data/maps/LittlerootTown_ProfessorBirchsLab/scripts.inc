@@ -135,12 +135,12 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	end
 
 LittlerootTown_EventScript_RestInBrendanBedroom::
-	warp MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 1, 2
+	warp MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 1, 3
 	releaseall
 	end
 
 LittlerootTown_EventScript_RestInMayBedroom::
-	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 1, 2
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 1, 3
 	releaseall
 	end
 
