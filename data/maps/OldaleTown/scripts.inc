@@ -35,17 +35,7 @@ OldaleTown_EventScript_Girl::
 
 OldaleTown_EventScript_MartEmployee::
 	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_ExplainPotion
-	goto_if_set FLAG_TEMP_1, OldaleTown_EventScript_ExplainPotion
-	setflag FLAG_TEMP_1
-	playbgm MUS_FOLLOW_ME, FALSE
 	msgbox OldaleTown_Text_IWorkAtPokemonMart, MSGBOX_DEFAULT
-	closemessage
-	switch VAR_FACING
-	case DIR_SOUTH, OldaleTown_EventScript_GoToMartSouth
-	case DIR_NORTH, OldaleTown_EventScript_GoToMartNorth
-	case DIR_EAST, OldaleTown_EventScript_GoToMartEast
 	end
 
 OldaleTown_EventScript_GoToMartSouth::
@@ -190,10 +180,13 @@ OldaleTown_Movement_Unknown2:
 OldaleTown_EventScript_FootprintsMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_NotBlockingPath
 	msgbox OldaleTown_Text_DiscoveredFootprints, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_FOOTPRINTS_MAN, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PLAYER, OldaleTown_Movement_RunAway
 	waitmovement 0
 	release
 	end
@@ -293,6 +286,11 @@ OldaleTown_EventScript_DoExitMovement2::
 	waitmovement 0
 	return
 
+OldaleTown_EventScript_ShouldAvoidBuildings::
+	msgbox OldaleTown_Text_ShouldAvoidBuildings, MSGBOX_SIGN
+	end
+
+
 OldaleTown_Movement_RivalApproachPlayer1:
 	walk_left
 	walk_left
@@ -326,6 +324,7 @@ OldaleTown_Movement_PlayerStepBack:
 	walk_right
 	step_end
 
+
 OldaleTown_Movement_BackUp:
 	walk_fast_up
 	walk_in_place_faster_left
@@ -339,14 +338,28 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 	walk_left
 	step_end
 
+OldaleTown_Movement_RunAway:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	face_left
+	face_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+
 OldaleTown_Text_SavingMyProgress:
-	.string "I want to take a rest, so I'm saving my\n"
-	.string "progress.$"
+    .string "Je veux me reposer un peu, alors je\n"
+    .string "sauvegarde ma progression.$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
-	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
-	.string "Can I get you to come with me?$"
+    .string "Seuelemnt 3 POKé BALLS et 5 POTIONS,\n"
+    .string "les affaires ne marchent pas fort…$"
+
 
 OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a POKéMON MART.\n"
@@ -370,10 +383,10 @@ OldaleTown_Text_WaitDontComeInHere:
 	.string "them, okay?$"
 
 OldaleTown_Text_DiscoveredFootprints:
-	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
-	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+    .string "Je viens de découvrir les empreintes\n"
+    .string "d'un POKéMON rare !\p"
+    .string "C'était toi n'est-ce pas ?!\n"
+    .string "Viens par là que je t'attrapes !$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
@@ -394,4 +407,9 @@ OldaleTown_Text_BrendanLetsGoBack:
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
+
+
+OldaleTown_Text_ShouldAvoidBuildings:
+	.string "“Je ferais mieux éviter d'entrer"
+	.string "dans les bâtiments ...”$"
 

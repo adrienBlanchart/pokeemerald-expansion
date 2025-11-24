@@ -25,16 +25,18 @@ Route103_EventScript_Rival::
 	end
 
 Route103_EventScript_RivalMay::
+	bufferleadmonspeciesname STR_VAR_1
 	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route103_Text_MayRoute103Pokemon2, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_MAY, TRUE
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartMayBattleTreecko
 	case 1, Route103_EventScript_StartMayBattleTorchic
@@ -42,16 +44,18 @@ Route103_EventScript_RivalMay::
 	end
 
 Route103_EventScript_RivalBrendan::
+	bufferleadmonspeciesname STR_VAR_1
 	msgbox Route103_Text_BrendanRoute103Pokemon, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox Route103_Text_BrendanRoute103Pokemon2, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
 	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route103_EventScript_StartBrendanBattleTreecko
 	case 1, Route103_EventScript_StartBrendanBattleTorchic
@@ -60,41 +64,31 @@ Route103_EventScript_RivalBrendan::
 
 Route103_EventScript_StartMayBattleTreecko::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_StartMayBattleTorchic::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_StartMayBattleMudkip::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
-	goto Route103_EventScript_AfterMayBattle
+	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_StartBrendanBattleTreecko::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_StartBrendanBattleTorchic::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_StartBrendanBattleMudkip::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
-	end
-
-Route103_EventScript_AfterMayBattle::
-	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
-	goto Route103_EventScript_RivalExit
-	end
-
-Route103_EventScript_AfterBrendanBattle::
-	msgbox Route103_Text_BrendanTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
@@ -156,10 +150,104 @@ Route103_EventScript_FoundCriminal::
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Route103_Movement_HideInBush
 	waitmovement 0
+
+	msgbox Route103_Text_CriminalTxt1, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE103_CRIMINAL_SALAMENCE, Common_Movement_Angry
+	waitmovement 0
+	msgbox Route103_Text_CriminalTxt2, MSGBOX_DEFAULT
+	closemessage
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route103_EventScript_RivalMay_TEXT_1
+	call_if_eq VAR_RESULT, FEMALE, Route103_EventScript_RivalBrendan_TEXT_1
+	closemessage
+	applymovement LOCALID_ROUTE103_RIVAL_TREECKO, Movement_SmashRock
+	waitmovement 0
+	
+	msgbox Route103_Text_CriminalTxt3, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE103_CRIMINAL_SALAMENCE, Common_Movement_Angry
+	waitmovement 0
+	applymovement LOCALID_ROUTE103_CRIMINAL, Common_Movement_Angry
+	waitmovement 0
+	msgbox Route103_Text_CriminalTxt4, MSGBOX_DEFAULT
+	closemessage
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route103_EventScript_RivalMay_TEXT_2
+	call_if_eq VAR_RESULT, FEMALE, Route103_EventScript_RivalBrendan_TEXT_2
+	closemessage
+	applymovement LOCALID_ROUTE103_RIVAL_TREECKO, Movement_SmashRock
+	waitmovement 0
+	
+	msgbox Route103_Text_CriminalTxt5, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ROUTE103_CRIMINAL_SALAMENCE, Common_Movement_Angry
+	waitmovement 0
+	applymovement LOCALID_ROUTE103_CRIMINAL_SALAMENCE, Movement_CutTreeDown
+	waitmovement 0
+	removeobject LOCALID_ROUTE103_RIVAL_TREECKO
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route103_EventScript_RivalMay_TEXT_3
+	call_if_eq VAR_RESULT, FEMALE, Route103_EventScript_RivalBrendan_TEXT_3
+	closemessage
+	removeobject LOCALID_ROUTE103_CRIMINAL_SALAMENCE
+	applymovement LOCALID_ROUTE103_CRIMINAL, Route103_Movement_CriminalExitSouth
+	waitmovement 0
+	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 4
+	setflag FLAG_CRIMINAL_DEFEATED_RIVAL_ROUTE103 
+	release
 	end
+
+Route103_EventScript_RivalMay_TEXT_1::
+	msgbox Route103_Text_MayRoute103_Text_1, MSGBOX_DEFAULT
+	end
+Route103_EventScript_RivalBrendan_TEXT_1::
+	msgbox Route103_Text_BrendanRoute103_Text_1, MSGBOX_DEFAULT
+	end
+
+Route103_EventScript_RivalMay_TEXT_2::
+	msgbox Route103_Text_MayRoute103_Text_2, MSGBOX_DEFAULT
+	end
+Route103_EventScript_RivalBrendan_TEXT_2::
+	msgbox Route103_Text_BrendanRoute103_Text_2, MSGBOX_DEFAULT
+	end
+
+Route103_EventScript_RivalMay_TEXT_3::
+	msgbox Route103_Text_MayRoute103_Text_3, MSGBOX_DEFAULT
+	end
+Route103_EventScript_RivalBrendan_TEXT_3::
+	msgbox Route103_Text_BrendanRoute103_Text_3, MSGBOX_DEFAULT
+	end
+
 
 Route103_Movement_RivalExitFacingNorth1:
 	walk_left
+	walk_down
+	step_end
+
+Route103_Movement_ExitSouth:
+	walk_down
+	jump_2_down
+	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	jump_2_down
+	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	step_end
 
@@ -314,32 +402,91 @@ Route103_EventScript_Isabelle::
 	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route103_Text_MayRoute103Pokemon:
-	.string "MAY: Let's see… The POKéMON found\n"
-	.string "on ROUTE 103 include…$"
+Route103_Text_CriminalTxt1:
+	.string "{PLAYER}{KUN}: Allez, attaque !$"
 
-Route103_Text_MayLetsBattle:
-	.string "Oh, hi, {PLAYER}{KUN}!\p"
-	.string "…Oh, I see, my dad gave you\n"
-	.string "a POKéMON as a gift.\p"
-	.string "Since we're here, let's have a quick\n"
-	.string "battle!\p"
-	.string "I'll give you a taste of what being\n"
-	.string "a TRAINER is like.$"
+Route103_Text_CriminalTxt2:
+	.string "{PLAYER}{KUN}: Obéis moi !$"
+
+Route103_Text_CriminalTxt3:
+	.string "{PLAYER}{KUN}: Allez, maintenant, déchiquettes-le !$"
+
+Route103_Text_CriminalTxt4:
+	.string "{PLAYER}{KUN}: Raaah !$"
+
+Route103_Text_CriminalTxt5:
+	.string "{PLAYER}{KUN}: Tu m'appartiens, tu dois m'obéir,"
+	.string "utilises Draco griffe !$"
+
+Route103_Text_MayRoute103_Text_1:
+	.string "MAY: Arcko, utilise charge !$"
+Route103_Text_BrendanRoute103_Text_1:
+	.string "BRENDAN: Arcko, utilise charge !$"
+
+Route103_Text_MayRoute103_Text_2:
+	.string "MAY: Courage Arcko,\n"
+	.string "Charge encore une fois !$"
+Route103_Text_BrendanRoute103_Text_2:
+	.string "BRENDAN: Courage Arcko,\n"
+	.string "Charge encore une fois !$"
+
+Route103_Text_MayRoute103_Text_3:
+	.string "{PLAYER}{KUN}: Ahahah !\n"
+	.string "Enfin !\n"
+	.string "Quelle force !\n"
+	.string "Avec un peu de dressage,"
+	.string "plus rien ne pourra m'arrêter !\n"
+	.string "MAY: Mais ...\n"
+	.string "c'est impossible..."
+	.string "je n'ai rien pu faire..."
+	.string "tu as triché !\n"
+	.string "{PLAYER}{KUN}: Dégage minus.\n"
+	.string "Tu étais faible, j'ai gagné, c'est tout."
+	.string "Je pars pour la League Pokémon,"
+	.string "Tu ferais mieux de rendre ton pokémon\n"
+	.string "et rentrer chez toi."
+Route103_Text_BrendanRoute103_Text_3:
+	.string "{PLAYER}{KUN}: Ahahah !\n"
+	.string "Enfin !\n"
+	.string "Quelle force !\n"
+	.string "Avec un peu de dressage,"
+	.string "plus rien ne pourra m'arrêter !\n"
+	.string "BRENDAN: Mais ...\n"
+	.string "c'est impossible..."
+	.string "je n'ai rien pu faire..."
+	.string "tu as triché !\n"
+	.string "{PLAYER}{KUN}: Dégage minus.\n"
+	.string "Tu étais faible, j'ai gagné, c'est tout."
+	.string "Je pars pour la League Pokémon,"
+	.string "Tu ferais mieux de rendre ton pokémon\n"
+	.string "et rentrer chez toi."
+
+Route103_Text_MayRoute103Pokemon:
+	.string "MAY: C'est pas normal,\n"
+	.string "ça devrait être interdit de commencer\n"
+	.string "avec un pokémon si fort...\n"
+	.string "...$"
+
+Route103_Text_MayRoute103Pokemon2:
+	.string "MAY: Mais...\n"
+	.string "C'est un {STR_VAR_1} !!"
+	.string "avec lui, la victoire est à moi !$"
+
+Route103_Text_BrendanRoute103Pokemon:
+	.string "MAY: C'est pas normal,\n"
+	.string "ça devrait être interdit de commencer\n"
+	.string "avec un pokémon si fort...\n"
+	.string "...$"
+
+Route103_Text_BrendanRoute103Pokemon2:
+	.string "MAY: Mais...\n"
+	.string "C'est un {STR_VAR_1} !!"
+	.string "avec lui, la victoire est à moi !$"
 
 Route103_Text_MayDefeated:
-	.string "Wow! That's great!\n"
-	.string "{PLAYER}{KUN}, you're pretty good!$"
+	.string "MAY: Mais c'est dingue !\n"
+	.string "Même pas capable de capturer un pokémon ...$"
 
-Route103_Text_MayTimeToHeadBack:
-	.string "MAY: I think I know why my dad has\n"
-	.string "an eye out for you now.\p"
-	.string "I mean, you just got that POKéMON,\n"
-	.string "but it already likes you.\p"
-	.string "You might be able to befriend any\n"
-	.string "kind of POKéMON easily.\p"
-	.string "Well, it's time to head back to\n"
-	.string "the LAB.$"
 
 Route103_Text_BrendanRoute103Pokemon:
 	.string "BRENDAN: Okay, so it's this one and\n"
@@ -354,17 +501,8 @@ Route103_Text_BrendanLetsBattle:
 	.string "about!$"
 
 Route103_Text_BrendanDefeated:
-	.string "Huh, {PLAYER}, you're not too shabby.$"
-
-Route103_Text_BrendanTimeToHeadBack:
-	.string "BRENDAN: I think I get it.\n"
-	.string "I think I know why my dad has his eye\l"
-	.string "out for you now.\p"
-	.string "Look, your POKéMON already likes you,\n"
-	.string "even though you just got it.\p"
-	.string "{PLAYER}, I get the feeling that you\n"
-	.string "could befriend any POKéMON with ease.\p"
-	.string "We should head back to the LAB.$"
+	.string "MAY: Mais c'est dingue !\n"
+	.string "Même pas capable de capturer un pokémon ...$"
 
 Route103_Text_ShouldHaveBroughtPotion:
     .string "Mes POKéMON sont épuisés…\n"

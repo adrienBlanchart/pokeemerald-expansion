@@ -54,7 +54,7 @@ Clearing_Pkmn_Nest_Movement_Shuckle_backward:
 
 
 Clearing_Pkmn_Nest_Text_SignParentWasHere:
-    .string "“Une odeur familière… Maman était ici.”'$"
+    .string "“Une odeur familière… Maman était ici.”$"
 
 Clearing_Pkmn_Nest_Text_Caratroc:
     .string "J'avais bien vu quelque chose filer dans cette clairière…$\n"
