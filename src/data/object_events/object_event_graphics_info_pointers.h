@@ -504,7 +504,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FANG_1] =        &gObjectEventGraphicsInfo_Fangs_1,
     [OBJ_EVENT_GFX_SALAMENCE_MEGA_1] =        &gObjectEventGraphicsInfo_SalamenceMega_1,
     [OBJ_EVENT_GFX_BAGON_1] =        &gObjectEventGraphicsInfo_Bagon_1,
-    [OBJ_EVENT_GFX_SHUCKLE_1] =        &gObjectEventGraphicsInfo_Shuckle_1
+    [OBJ_EVENT_GFX_SHUCKLE_1] =        &gObjectEventGraphicsInfo_Shuckle_1,
     [OBJ_EVENT_GFX_TREECKO_1] =        &gObjectEventGraphicsInfo_Treecko_1
 };
 
