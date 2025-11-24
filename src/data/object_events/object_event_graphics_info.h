@@ -4779,6 +4779,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
 DEFINE_OBJ_GFX_SIMPLE(SalamenceMega_1, OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA)
 DEFINE_OBJ_GFX_SIMPLE(Bagon_1,         OBJ_EVENT_PAL_TAG_BAGON)
 DEFINE_OBJ_GFX_SIMPLE(Shuckle_1,      OBJ_EVENT_PAL_TAG_SHUCKLE)
+DEFINE_OBJ_GFX_SIMPLE(Treecko_1,      OBJ_EVENT_PAL_TAG_TREECKO)
 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs_1 = {

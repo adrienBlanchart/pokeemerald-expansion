@@ -1501,6 +1501,7 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
     if (VarGet(VAR_CUSTOM_LITTLEROOT_PROGRESSION) < 2){
+        OBJ_EVENT_GFX_VAR_10 = sPlayerAvatarGfxIds[state][gender];
         return sPlayerAvatarGfxIds[state][gender];
     }
     u32 firstPkmnSpecies = GetMonData(&gPlayerParty[0], MON_DATA_SPECIES);

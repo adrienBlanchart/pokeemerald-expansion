@@ -497,6 +497,10 @@ const u16 gObjectEventPal_Shuckle_1[] = INCBIN_U16("graphics/pokemon/shuckle/ove
 const u32 gObjectEventPic_Shuckle_1[] = INCBIN_COMP("graphics/pokemon/shuckle/overworld.4bpp");
  
 
+const u16 gObjectEventPal_Treecko_1[] = INCBIN_U16("graphics/pokemon/treecko/overworld_normal.gbapal");
+const u32 gObjectEventPic_Treecko_1[] = INCBIN_COMP("graphics/pokemon/treecko/overworld.4bpp");
+ 
+
 /* DEFINE_OBJ_ASSETS(Bagon)
 DEFINE_OBJ_ASSETS_MEGA(Salamence)
 DEFINE_OBJ_ASSETS(Shuckle)

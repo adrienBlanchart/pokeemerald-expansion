@@ -53,6 +53,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_UseDive                   @ FLDEFF_USE_DIVE
 	.4byte gFieldEffectScript_PokeballTrail             @ FLDEFF_POKEBALL_TRAIL
 	.4byte gFieldEffectScript_HeartIcon                 @ FLDEFF_HEART_ICON
+	.4byte gFieldEffectScript_AngryIcon                 @ FLDEFF_ANGRY_ICON
 	.4byte gFieldEffectScript_Nop47                     @ FLDEFF_NOP_47
 	.4byte gFieldEffectScript_Nop48                     @ FLDEFF_NOP_48
 	.4byte gFieldEffectScript_AshPuff                   @ FLDEFF_ASH_PUFF
@@ -272,6 +273,10 @@ gFieldEffectScript_PokeballTrail::
 
 gFieldEffectScript_HeartIcon::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_HeartIcon
+	field_eff_end
+
+gFieldEffectScript_AngryIcon::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_AngryIcon
 	field_eff_end
 
 gFieldEffectScript_Nop47::

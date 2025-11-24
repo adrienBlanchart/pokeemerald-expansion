@@ -148,6 +148,16 @@ Route103_EventScript_RivalEnd::
 	releaseall
 	end
 
+Route103_EventScript_FoundCriminal::
+	lock
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Route103_Movement_HideInBush
+	waitmovement 0
+	end
+
 Route103_Movement_RivalExitFacingNorth1:
 	walk_left
 	walk_down
@@ -186,6 +196,24 @@ Route103_Movement_WatchRivalExitFacingEastOrWest:
 	delay_16
 	walk_in_place_faster_down
 	step_end
+
+
+
+Route103_Movement_HideInBush:
+	lock
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	face_up
+	release
+	step_end
+
 
 Route103_EventScript_Boy::
 	msgbox Route103_Text_ShouldHaveBroughtPotion, MSGBOX_NPC
@@ -339,8 +367,9 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "We should head back to the LAB.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
-	.string "My POKéMON is staggeringly tired…\n"
-	.string "I should have brought a POTION…$"
+    .string "Mes POKéMON sont épuisés…\n"
+    .string "J'aurais dû prendre une POTION…$"
+
 
 Route103_Text_ShortcutToOldale:
 	.string "If you cross the sea from here,\n"
