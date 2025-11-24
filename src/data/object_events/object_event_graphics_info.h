@@ -4712,6 +4712,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 #define COMP OW_GFX_COMPRESS
 
+/* 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SalamenceMega1 = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA, // Palette dynamique pour overworld
@@ -4749,6 +4750,36 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bagon1 = {
     .images = sPicTable_Bagon_1, // Table des images overworld
     .affineAnims = gDummySpriteAffineAnimTable
 };
+ */
+
+// my custom macro to define overworld graphics info
+// Voir les graphics info dans : ./object_event_pic_tables.h
+// Ajouter le pointer dans ./object_event_graphics_info_pointers.h
+
+#define DEFINE_OBJ_GFX_SIMPLE(name, palTag) \
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
+    .tileTag = TAG_NONE, \
+    .paletteTag = palTag, \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, \
+    .size = 512, \
+    .width = 32, \
+    .height = 32, \
+    .paletteSlot = PALSLOT_NPC_1, \
+    .shadowSize = SHADOW_SIZE_M, \
+    .inanimate = FALSE, \
+    .compressed = COMP, \
+    .tracks = TRACKS_FOOT, \
+    .oam = &gObjectEventBaseOam_32x32, \
+    .subspriteTables = sOamTables_32x32, \
+    .anims = sAnimTable_Following, \
+    .images = sPicTable_##name, \
+    .affineAnims = gDummySpriteAffineAnimTable \
+};
+
+DEFINE_OBJ_GFX_SIMPLE(SalamenceMega1, OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA)
+DEFINE_OBJ_GFX_SIMPLE(Bagon1,         OBJ_EVENT_PAL_TAG_BAGON)
+DEFINE_OBJ_GFX_SIMPLE(Shuckle_1,      OBJ_EVENT_PAL_TAG_SHUCKLE)
+
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs1 = {
     .tileTag = TAG_NONE,

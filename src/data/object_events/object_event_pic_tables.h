@@ -406,22 +406,6 @@ static const struct SpriteFrameImage sPicTable_EnemyZigzagoon[] = {
     overworld_ascending_frames(gObjectEventPic_EnemyZigzagoon, 4, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_SalamenceMega_1[] = {
-    overworld_ascending_frames(gObjectEventPic_SalamenceMega_1, 4, 4),
-};
-
-static const struct SpriteFrameImage sPal_SalamenceMega1[] = {
-    overworld_ascending_frames(gObjectEventPal_SalamenceMega_1, 4, 4),
-};
-
-static const struct SpriteFrameImage sPicTable_Bagon_1[] = {
-    overworld_ascending_frames(gObjectEventPic_Bagon_1, 4, 4),
-};
-
-static const struct SpriteFrameImage sPal_Bagon_1[] = {
-    overworld_ascending_frames(gObjectEventPal_Bagon_1, 4, 4),
-};
-
 
 static const struct SpriteFrameImage sPicTable_Artist[] = {
     overworld_ascending_frames(gObjectEventPic_Artist, 2, 4),
@@ -1380,3 +1364,36 @@ static const struct SpriteFrameImage sPicTable_KirliaOld[] = {
 static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireMayNormal, 2, 4),
 };
+
+// my custom overworld tables
+// Voir les graphics path dans : ./object_event_graphics_info.h
+
+/* static const struct SpriteFrameImage sPicTable_SalamenceMega_1[] = {
+    overworld_ascending_frames(gObjectEventPic_SalamenceMega_1, 4, 4),
+};
+
+static const struct SpriteFrameImage sPal_SalamenceMega1[] = {
+    overworld_ascending_frames(gObjectEventPal_SalamenceMega_1, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Bagon_1[] = {
+    overworld_ascending_frames(gObjectEventPic_Bagon_1, 4, 4),
+};
+
+static const struct SpriteFrameImage sPal_Bagon_1[] = {
+    overworld_ascending_frames(gObjectEventPal_Bagon_1, 4, 4),
+};
+ */
+
+#define DEFINE_OVERWORLD_TABLES(name) \
+static const struct SpriteFrameImage sPicTable_##name[] = { \
+    overworld_ascending_frames(gObjectEventPic_##name, 4, 4), \
+}; \
+static const struct SpriteFrameImage sPal_##name[] = { \
+    overworld_ascending_frames(gObjectEventPal_##name, 4, 4), \
+};
+
+
+DEFINE_OVERWORLD_TABLES(Bagon_1)
+DEFINE_OVERWORLD_TABLES(SalamenceMega_1)
+DEFINE_OVERWORLD_TABLES(Shuckle_1)
