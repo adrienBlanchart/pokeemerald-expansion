@@ -1,11 +1,11 @@
-#define DEFINE_OBJ_ASSETS(name) \
+#define DEFINE_OBJ_ASSETS(name){ \
 const u16 gObjectEventPal_##name##_1[] = INCBIN_U16("graphics/pokemon/" #name "/overworld_normal.gbapal"); \
-const u32 gObjectEventPic_##name##_1[] = INCBIN_COMP("graphics/pokemon/" #name "/overworld.4bpp");
+const u32 gObjectEventPic_##name##_1[] = INCBIN_COMP("graphics/pokemon/" #name "/overworld.4bpp");}
 
 
-#define DEFINE_OBJ_ASSETS_MEGA(name) \
+#define DEFINE_OBJ_ASSETS_MEGA(name){ \
 const u16 gObjectEventPal_##name##Mega_1[] = INCBIN_U16("graphics/pokemon/" #name "/mega/overworld_normal.gbapal"); \
-const u32 gObjectEventPic_##name##Mega_1[] = INCBIN_COMP("graphics/pokemon/" #name "/mega/overworld.4bpp");
+const u32 gObjectEventPic_##name##Mega_1[] = INCBIN_COMP("graphics/pokemon/" #name "/mega/overworld.4bpp");}
 
 
 const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
