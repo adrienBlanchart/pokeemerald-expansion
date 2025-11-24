@@ -279,48 +279,47 @@ PlayersHouse_2F_EventScript_ShouldGoToBed::
 
 PlayersHouse_2F_EventScript_RestAndBecomePkmn::
 	setvar VAR_CUSTOM_LITTLEROOT_PROGRESSION, 2
+	clearflag FLAG_HIDE_CLEARING_NEST_SHUCKLE_1
 	special Remove1stPkmn
 	warp MAP_CLEARING_PKMN_NEST, 2, 5
 	msgbox PlayersHouse_2F_Text_Mom, MSGBOX_DEFAULT
 	closemessage
 	end
-
+	
 PlayersHouse_2F_Text_ClockIsStopped:
-	.string "The clock is stopped…\p"
-	.string "Better set it and start it!$"
+    .string "L'horloge est arrêtée…\p"
+    .string "Mieux vaut la régler et la remettre en marche !$"
 
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "MOM: {PLAYER}, how do you like your\n"
-	.string "new room?\p"
-	.string "Good! Everything's put away neatly!\p"
-	.string "They finished moving everything in\n"
-	.string "downstairs, too.\p"
-	.string "POKéMON movers are so convenient!\p"
-	.string "Oh, you should make sure that\n"
-	.string "everything's all there on your desk.$"
+    .string "MAMAN : {PLAYER}, comment trouves-tu\n"
+    .string "ta nouvelle chambre ?\p"
+    .string "Bien ! Tout est bien rangé !\p"
+    .string "Ils ont fini de tout déménager\n"
+    .string "en bas aussi.\p"
+    .string "Les déménageurs POKéMON sont tellement pratiques !\p"
+    .string "Ah, tu devrais vérifier que\n"
+    .string "tout est bien là sur ton bureau.$"
 
 PlayersHouse_2F_Text_Notebook:
-	.string "{PLAYER} flipped open the notebook.\p"
-	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
-	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
-	.string "The remaining pages are blank…$"
+    .string "{PLAYER} a ouvert le carnet.\p"
+    .string "RÈGLE D'AVENTURE N°1\n"
+    .string "Ouvre le MENU avec START.\p"
+    .string "RÈGLE D'AVENTURE N°2\n"
+    .string "Enregistre ta progression avec SAVE.\p"
+    .string "Les pages restantes sont vierges…$"
 
 Common_Text_LookCloserAtMap:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "HOENN region map.$"
+    .string "{PLAYER} a regardé de plus près la\n"
+    .string "carte de la région de HOENN.$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
-	.string "It's a Nintendo GameCube.\p"
-	.string "A Game Boy Advance is connected to\n"
-	.string "serve as the Controller.$"
+    .string "C'est une Nintendo GameCube.\p"
+    .string "Une Game Boy Advance est connectée\n"
+    .string "pour servir de manette.$"
 
 PlayersHouse_2F_Text_ShouldGoToBed:
-    .string "I should go to bed.\n"
-    .string "I need to rest for a while.$"
+    .string "Je devrais aller me coucher.\n"
+    .string "Il me faut me reposer un moment.$"
 
 PlayersHouse_2F_Text_Mom:
-    .string "“…Mom…?”$"
-
-	
+    .string "“…Maman… ?”$"

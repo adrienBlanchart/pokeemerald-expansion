@@ -32,7 +32,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_CLEARING_NEST_SHUCKLE_1"
     }
   ],
   "warp_events": [],
@@ -44,7 +44,7 @@
       "elevation": 0,
       "var": "VAR_CUSTOM_LITTLEROOT_PROGRESSION",
       "var_value": "2",
-      "script": "NULL"
+      "script": "Clearing_Pkmn_Nest_EventScript_Shuckle_Approch"
     }
   ],
   "bg_events": [

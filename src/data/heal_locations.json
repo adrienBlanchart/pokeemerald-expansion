@@ -186,6 +186,16 @@
       "y": 52,
       "respawn_map": "MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_FRONTIER_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_CLEARING",
+      "map": "MAP_CLEARING_PKMN_NEST",
+      "x": 2,
+      "y": 5,
+      "respawn_map": "MAP_CLEARING_PKMN_NEST",
+      "respawn_npc": "",
+      "respawn_x": 2,
+      "respawn_y": 5
     }
   ]
 }

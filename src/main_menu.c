@@ -1295,6 +1295,8 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 static void InitVars(void){
      // Initialize custom progression variables here
     VarSet(VAR_CUSTOM_LITTLEROOT_PROGRESSION, 0);
+    FlagSet(FLAG_HIDE_CLEARING_NEST_SHUCKLE_1);
+
 }
 
 
