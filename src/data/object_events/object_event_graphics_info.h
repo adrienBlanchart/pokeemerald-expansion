@@ -4776,8 +4776,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
     .affineAnims = gDummySpriteAffineAnimTable \
 };
 
-DEFINE_OBJ_GFX_SIMPLE(SalamenceMega1, OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA)
-DEFINE_OBJ_GFX_SIMPLE(Bagon1,         OBJ_EVENT_PAL_TAG_BAGON)
+DEFINE_OBJ_GFX_SIMPLE(SalamenceMega_1, OBJ_EVENT_PAL_TAG_SALAMENCE_MEGA)
+DEFINE_OBJ_GFX_SIMPLE(Bagon_1,         OBJ_EVENT_PAL_TAG_BAGON)
 DEFINE_OBJ_GFX_SIMPLE(Shuckle_1,      OBJ_EVENT_PAL_TAG_SHUCKLE)
 
 
