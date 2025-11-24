@@ -59,10 +59,8 @@ static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildM
 static bool8 IsAbilityAllowingEncounter(u8 level);
 
 #ifdef NO_WILD_ENCOUNTER
-EWRAM_DATA static u8 sWildEncountersDisabled = 1;
-#else
+
 EWRAM_DATA static u8 sWildEncountersDisabled = 0;
-#endif
 EWRAM_DATA static u32 sFeebasRngValue = 0;
 EWRAM_DATA bool8 gIsFishingEncounter = 0;
 EWRAM_DATA bool8 gIsSurfingEncounter = 0;
@@ -696,6 +694,9 @@ bool8 StandardWildEncounter(u16 curMetatileBehavior, u16 prevMetatileBehavior)
     enum TimeOfDay timeOfDay;
     struct Roamer *roamer;
 
+    #ifdef NO_WILD_ENCOUNTER
+    return FALSE;
+    #endif
     if (sWildEncountersDisabled == TRUE)
         return FALSE;
 
