@@ -88,3 +88,4 @@
 
 
 #define CUSTOM_GAME_MENU  TRUE // change the menu for my custom rom :)
+#define NO_WILD_ENCOUNTER  TRUE // change the menu for my custom rom :)
