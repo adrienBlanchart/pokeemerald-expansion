@@ -4781,7 +4781,7 @@ DEFINE_OBJ_GFX_SIMPLE(Bagon_1,         OBJ_EVENT_PAL_TAG_BAGON)
 DEFINE_OBJ_GFX_SIMPLE(Shuckle_1,      OBJ_EVENT_PAL_TAG_SHUCKLE)
 
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs1 = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fangs_1 = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_FANG,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
