@@ -9,6 +9,14 @@ Common_Movement_ExclamationMark:
 	emote_exclamation_mark
 	step_end
 
+Common_Movement_Heart:
+	emote_heart
+	step_end
+
+Common_Movement_Angry:
+	emote_angry
+	step_end
+
 Common_Movement_Delay48:
 	delay_16
 	delay_16
