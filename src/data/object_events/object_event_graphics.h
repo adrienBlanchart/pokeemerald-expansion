@@ -493,8 +493,8 @@ const u16 gObjectEventPal_Bagon_1[] = INCBIN_U16("graphics/pokemon/bagon/overwor
 const u32 gObjectEventPic_Bagon_1[] = INCBIN_COMP("graphics/pokemon/bagon/overworld.4bpp");
  
 
-const u16 gObjectEventPal_Shuckle_1[] = INCBIN_U16("graphics/pokemon/Shuckle/overworld_normal.gbapal");
-const u32 gObjectEventPic_Shuckle_1[] = INCBIN_COMP("graphics/pokemon/Shuckle/overworld.4bpp");
+const u16 gObjectEventPal_Shuckle_1[] = INCBIN_U16("graphics/pokemon/shuckle/overworld_normal.gbapal");
+const u32 gObjectEventPic_Shuckle_1[] = INCBIN_COMP("graphics/pokemon/shuckle/overworld.4bpp");
  
 
 /* DEFINE_OBJ_ASSETS(Bagon)
