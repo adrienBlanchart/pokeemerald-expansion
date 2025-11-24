@@ -1394,6 +1394,6 @@ static const struct SpriteFrameImage sPal_##name[] = { \
 };
 
 
-DEFINE_OVERWORLD_TABLES(Bagon_1)
-DEFINE_OVERWORLD_TABLES(SalamenceMega_1)
-DEFINE_OVERWORLD_TABLES(Shuckle_1)
+DEFINE_OVERWORLD_TABLES(Bagon_1);
+DEFINE_OVERWORLD_TABLES(SalamenceMega_1);
+DEFINE_OVERWORLD_TABLES(Shuckle_1);
