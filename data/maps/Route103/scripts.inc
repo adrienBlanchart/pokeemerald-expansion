@@ -473,13 +473,13 @@ Route103_Text_MayRoute103Pokemon2:
 	.string "avec lui, la victoire est à moi !$"
 
 Route103_Text_BrendanRoute103Pokemon:
-	.string "MAY: C'est pas normal,\n"
+	.string "BRENDAN: C'est pas normal,\n"
 	.string "ça devrait être interdit de commencer\n"
 	.string "avec un pokémon si fort...\n"
 	.string "...$"
 
 Route103_Text_BrendanRoute103Pokemon2:
-	.string "MAY: Mais...\n"
+	.string "BRENDAN: Mais...\n"
 	.string "C'est un {STR_VAR_1} !!"
 	.string "avec lui, la victoire est à moi !$"
 
@@ -487,10 +487,6 @@ Route103_Text_MayDefeated:
 	.string "MAY: Mais c'est dingue !\n"
 	.string "Même pas capable de capturer un pokémon ...$"
 
-
-Route103_Text_BrendanRoute103Pokemon:
-	.string "BRENDAN: Okay, so it's this one and\n"
-	.string "that one that live on ROUTE 103…$"
 
 Route103_Text_BrendanLetsBattle:
 	.string "Hey, it's {PLAYER}!\p"
@@ -501,7 +497,7 @@ Route103_Text_BrendanLetsBattle:
 	.string "about!$"
 
 Route103_Text_BrendanDefeated:
-	.string "MAY: Mais c'est dingue !\n"
+	.string "BRENDAN: Mais c'est dingue !\n"
 	.string "Même pas capable de capturer un pokémon ...$"
 
 Route103_Text_ShouldHaveBroughtPotion:
