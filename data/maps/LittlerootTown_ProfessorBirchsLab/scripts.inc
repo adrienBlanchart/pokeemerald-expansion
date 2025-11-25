@@ -933,7 +933,7 @@ LittlerootTown_ProfessorBirchsLab_Text_ReceivedJohtoStarter:
 
 @ Unused
 LittlerootTown_ProfessorBirchsLab_Text_NicknameJohtoStarter:
-    .string "Veux‑tu donner un surnom au\n"
+    .string "Veux-tu donner un surnom au\n"
     .string "{STR_VAR_1} que tu as reçu ?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting:
@@ -956,10 +956,10 @@ LittlerootTown_ProfessorBirchsLab_Text_DontHaveAnyRoomForPokemon:
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhatNextImStayingHere:
     .string "MAY : {PLAYER}{KUN}, après tout ça…\n"
-    .string "Que vas‑tu faire ?\p"
-    .string "Vas‑tu continuer à combattre\n"
+    .string "Que vas-tu faire ?\p"
+    .string "Vas-tu continuer à combattre\n"
     .string "et à perfectionner tes compétences ?\p"
-    .string "Ou vas‑tu essayer de compléter\n"
+    .string "Ou vas-tu essayer de compléter\n"
     .string "le POKéDEX NATIONAL ?\p"
     .string "Moi, je reste ici pour aider le PROF.$"
 
@@ -970,12 +970,12 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanPreferCollectingSlowly:
 
 LittlerootTown_ProfessorBirchsLab_Text_MayHaveYouGoneToBattleFrontier:
     .string "MAY : Oh, salut, {PLAYER}{KUN} !\n"
-    .string "Es‑tu allé à cet endroit,\l"
+    .string "Es-tu allé à cet endroit,\l"
     .string "la BATTLE FRONTIER ?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanHaveYouGoneToBattleFrontier:
     .string "BRENDAN : Hé, {PLAYER} !\n"
-    .string "Es‑tu allé à cet endroit,\l"
+    .string "Es-tu allé à cet endroit,\l"
     .string "la BATTLE FRONTIER ?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:

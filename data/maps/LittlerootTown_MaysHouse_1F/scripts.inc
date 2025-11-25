@@ -389,7 +389,7 @@ RivalsHouse_1F_Text_BrendanWhoAreYou:
     .string "Je m'appelle BRENDAN.\n"
     .string "Alors, salut, voisin !\p"
     .string "Hein ? {PLAYER}, tu n'as pas de POKéMON ?\p"
-    .string "Veux‑tu que je t'en attrape un ?\p"
+    .string "Veux-tu que je t'en attrape un ?\p"
     .string "Ah mince, j'ai oublié…\p"
     .string "Je devais aider mon père à attraper\n"
     .string "des POKéMON sauvages.\p"
