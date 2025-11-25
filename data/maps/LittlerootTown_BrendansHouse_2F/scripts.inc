@@ -302,9 +302,9 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 
 PlayersHouse_2F_Text_Notebook:
     .string "{PLAYER} a ouvert le carnet.\p"
-    .string "RÈGLE D'AVENTURE N°1\n"
+    .string "RÈGLE D'AVENTURE N.1\n"
     .string "Ouvre le MENU avec START.\p"
-    .string "RÈGLE D'AVENTURE N°2\n"
+    .string "RÈGLE D'AVENTURE N.2\n"
     .string "Enregistre ta progression avec SAVE.\p"
     .string "Les pages restantes sont vierges…$"
 
