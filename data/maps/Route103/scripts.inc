@@ -225,7 +225,7 @@ Route103_Movement_RivalExitFacingNorth1:
 	walk_down
 	step_end
 
-Route103_Movement_ExitSouth:
+Route103_Movement_CriminalExitSouth:
 	walk_down
 	jump_2_down
 	delay_16

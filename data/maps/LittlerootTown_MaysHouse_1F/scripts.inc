@@ -314,7 +314,9 @@ LittlerootTown_MaysHouse_1F_Movement_MayGoUpstairs2:
 	walk_in_place_faster_up
 	walk_up
 	walk_up
-	step_endRivalsHouse_1F_Text_OhYoureTheNewNeighbor:
+	step_end
+	
+RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
     .string "Oh, bonjour. Et toi, tu es… ?\p"
     .string "… … … … … … … … …\n"
     .string "… … … … … … … … …\p"
