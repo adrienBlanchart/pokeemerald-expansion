@@ -377,10 +377,10 @@ PlayersHouse_1F_Text_TheresAMovieOnTV:
 
 PlayersHouse_1F_Text_RunningShoesManual:
     .string "C'est le manuel des CHAUSSURES DE COURSE.\p"
-    .string "« Appuie sur le bouton B pour courir\n"
-    .string "en portant tes CHAUSSURES DE COURSE.\p"
-    .string "« Lace tes CHAUSSURES DE COURSE et pars\n"
-    .string "sur la route en courant ! »$"
+    .string "“Appuie sur le bouton B pour courir\n"
+    .string "en portant tes CHAUSSURES DE COURSE.”\p"
+    .string "“ Lace tes CHAUSSURES DE COURSE et pars\n"
+    .string "sur la route en courant ! ”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
     .string "PAPA : Hmm ?\p"
